@@ -30,6 +30,7 @@ import org.apache.hadoop.hbase.HBaseInterfaceAudience;
 import org.apache.hadoop.hbase.HColumnDescriptor;
 import org.apache.hadoop.hbase.HRegionInfo;
 import org.apache.hadoop.hbase.HTableDescriptor;
+import org.apache.hadoop.hbase.MetaMutationAnnotation;
 import org.apache.hadoop.hbase.NamespaceDescriptor;
 import org.apache.hadoop.hbase.ProcedureInfo;
 import org.apache.hadoop.hbase.ServerName;
@@ -37,9 +38,12 @@ import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
 import org.apache.hadoop.hbase.classification.InterfaceStability;
 import org.apache.hadoop.hbase.client.MasterSwitchType;
+import org.apache.hadoop.hbase.client.Mutation;
 import org.apache.hadoop.hbase.master.RegionPlan;
 import org.apache.hadoop.hbase.master.procedure.MasterProcedureEnv;
 import org.apache.hadoop.hbase.procedure2.ProcedureExecutor;
+import org.apache.hadoop.hbase.regionserver.Region;
+import org.apache.hadoop.hbase.replication.ReplicationPeerConfig;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.QuotaProtos.Quotas;
 
@@ -990,7 +994,7 @@ public interface MasterObserver extends Coprocessor {
    * @param procId the Id of the procedure
    * @throws IOException if something went wrong
    */
-  public void preAbortProcedure(
+  void preAbortProcedure(
       ObserverContext<MasterCoprocessorEnvironment> ctx,
       final ProcedureExecutor<MasterProcedureEnv> procEnv,
       final long procId) throws IOException;
@@ -1000,7 +1004,7 @@ public interface MasterObserver extends Coprocessor {
    * @param ctx the environment to interact with the framework and master
    * @throws IOException if something went wrong
    */
-  public void postAbortProcedure(ObserverContext<MasterCoprocessorEnvironment> ctx)
+  void postAbortProcedure(ObserverContext<MasterCoprocessorEnvironment> ctx)
       throws IOException;
 
   /**
@@ -1131,6 +1135,136 @@ public interface MasterObserver extends Coprocessor {
    */
   void postSetSplitOrMergeEnabled(final ObserverContext<MasterCoprocessorEnvironment> ctx,
       final boolean newValue, final MasterSwitchType switchType) throws IOException;
+
+  /**
+   * Called before the split region procedure is called.
+   * @param c the environment to interact with the framework and master
+   * @param tableName the table where the region belongs to
+   * @param splitRow split point
+   * @throws IOException if an error occurred on the coprocessor
+   */
+  void preSplitRegion(
+      final ObserverContext<MasterCoprocessorEnvironment> c,
+      final TableName tableName,
+      final byte[] splitRow)
+      throws IOException;
+
+  /**
+   * Called before the region is split.
+   * @param c the environment to interact with the framework and master
+   * @param tableName the table where the region belongs to
+   * @param splitRow split point
+   * @throws IOException if an error occurred on the coprocessor
+   */
+  void preSplitRegionAction(
+      final ObserverContext<MasterCoprocessorEnvironment> c,
+      final TableName tableName,
+      final byte[] splitRow)
+      throws IOException;
+
+  /**
+   * Called after the region is split.
+   * @param c the environment to interact with the framework and master
+   * @param regionInfoA the left daughter region
+   * @param regionInfoB the right daughter region
+   * @throws IOException if an error occurred on the coprocessor
+   */
+  void postCompletedSplitRegionAction(
+      final ObserverContext<MasterCoprocessorEnvironment> c,
+      final HRegionInfo regionInfoA,
+      final HRegionInfo regionInfoB) throws IOException;
+
+  /**
+   * This will be called before PONR step as part of split transaction. Calling
+   * {@link org.apache.hadoop.hbase.coprocessor.ObserverContext#bypass()} rollback the split
+   * @param ctx the environment to interact with the framework and master
+   * @param splitKey
+   * @param metaEntries
+   * @throws IOException
+   */
+  void preSplitRegionBeforePONRAction(
+      final ObserverContext<MasterCoprocessorEnvironment> ctx,
+      final byte[] splitKey,
+      final List<Mutation> metaEntries) throws IOException;
+
+
+  /**
+   * This will be called after PONR step as part of split transaction
+   * Calling {@link org.apache.hadoop.hbase.coprocessor.ObserverContext#bypass()} has no
+   * effect in this hook.
+   * @param ctx the environment to interact with the framework and master
+   * @throws IOException
+   */
+  void preSplitRegionAfterPONRAction(final ObserverContext<MasterCoprocessorEnvironment> ctx)
+      throws IOException;
+
+  /**
+   * This will be called after the roll back of the split region is completed
+   * @param ctx the environment to interact with the framework and master
+   * @throws IOException
+   */
+  void postRollBackSplitRegionAction(final ObserverContext<MasterCoprocessorEnvironment> ctx)
+      throws IOException;
+
+  /**
+   * Called before the regions merge.
+   * Call {@link org.apache.hadoop.hbase.coprocessor.ObserverContext#bypass()} to skip the merge.
+   * @throws IOException if an error occurred on the coprocessor
+   * @param ctx
+   * @param regionsToMerge
+   * @throws IOException
+   */
+  void preMergeRegionsAction(
+      final ObserverContext<MasterCoprocessorEnvironment> ctx,
+      final HRegionInfo[] regionsToMerge) throws IOException;
+
+  /**
+   * called after the regions merge.
+   * @param c
+   * @param regionsToMerge
+   * @param mergedRegion
+   * @throws IOException
+   */
+  void postCompletedMergeRegionsAction(
+      final ObserverContext<MasterCoprocessorEnvironment> c,
+      final HRegionInfo[] regionsToMerge,
+      final HRegionInfo mergedRegion) throws IOException;
+
+  /**
+   * This will be called before PONR step as part of regions merge transaction. Calling
+   * {@link org.apache.hadoop.hbase.coprocessor.ObserverContext#bypass()} rollback the merge
+   * @param ctx
+   * @param regionsToMerge
+   * @param metaEntries mutations to execute on hbase:meta atomically with regions merge updates.
+   *        Any puts or deletes to execute on hbase:meta can be added to the mutations.
+   * @throws IOException
+   */
+  void preMergeRegionsCommitAction(
+      final ObserverContext<MasterCoprocessorEnvironment> ctx,
+      final HRegionInfo[] regionsToMerge,
+      @MetaMutationAnnotation List<Mutation> metaEntries) throws IOException;
+
+  /**
+   * This will be called after PONR step as part of regions merge transaction.
+   * @param ctx
+   * @param regionsToMerge
+   * @param mergedRegion
+   * @throws IOException
+   */
+  void postMergeRegionsCommitAction(
+      final ObserverContext<MasterCoprocessorEnvironment> ctx,
+      final HRegionInfo[] regionsToMerge,
+      final HRegionInfo mergedRegion) throws IOException;
+
+  /**
+   * This will be called after the roll back of the regions merge.
+   * @param ctx
+   * @param regionsToMerge
+   * @throws IOException
+   */
+  void postRollBackMergeRegionsAction(
+      final ObserverContext<MasterCoprocessorEnvironment> ctx,
+      final HRegionInfo[] regionsToMerge) throws IOException;
 
   /**
    * Called prior to modifying the flag used to enable/disable region balancing.
@@ -1566,7 +1700,7 @@ public interface MasterObserver extends Coprocessor {
    * @param regionB second region to be merged
    * @throws IOException if an error occurred on the coprocessor
    */
-  public void preDispatchMerge(final ObserverContext<MasterCoprocessorEnvironment> ctx,
+  void preDispatchMerge(final ObserverContext<MasterCoprocessorEnvironment> ctx,
       HRegionInfo regionA, HRegionInfo regionB) throws IOException;
   
   /**
@@ -1578,6 +1712,27 @@ public interface MasterObserver extends Coprocessor {
    */
   void postDispatchMerge(final ObserverContext<MasterCoprocessorEnvironment> c,
       final HRegionInfo regionA, final HRegionInfo regionB) throws IOException;
+
+  /**
+   * Called before merge regions request.
+   * It can't bypass the default action, e.g., ctx.bypass() won't have effect.
+   * @param ctx coprocessor environment
+   * @param regionsToMerge regions to be merged
+   * @throws IOException if an error occurred on the coprocessor
+   */
+  void preMergeRegions(
+      final ObserverContext<MasterCoprocessorEnvironment> ctx,
+      final HRegionInfo[] regionsToMerge) throws IOException;
+
+  /**
+   * called after merge regions request.
+   * @param c coprocessor environment
+   * @param regionsToMerge regions to be merged
+   * @throws IOException if an error occurred on the coprocessor
+   */
+  void postMergeRegions(
+      final ObserverContext<MasterCoprocessorEnvironment> c,
+      final HRegionInfo[] regionsToMerge) throws IOException;
 
   /**
    * Called before servers are moved to target region server group
@@ -1673,4 +1828,85 @@ public interface MasterObserver extends Coprocessor {
   void postBalanceRSGroup(final ObserverContext<MasterCoprocessorEnvironment> ctx,
                           String groupName, boolean balancerRan) throws IOException;
 
+  /**
+   * Called before add a replication peer
+   * @param ctx the environment to interact with the framework and master
+   * @param peerId a short name that identifies the peer
+   * @param peerConfig configuration for the replication peer
+   * @throws IOException on failure
+   */
+  default void preAddReplicationPeer(final ObserverContext<MasterCoprocessorEnvironment> ctx,
+      String peerId, ReplicationPeerConfig peerConfig) throws IOException {
+  }
+
+  /**
+   * Called after add a replication peer
+   * @param ctx the environment to interact with the framework and master
+   * @param peerId a short name that identifies the peer
+   * @param peerConfig configuration for the replication peer
+   * @throws IOException on failure
+   */
+  default void postAddReplicationPeer(final ObserverContext<MasterCoprocessorEnvironment> ctx,
+      String peerId, ReplicationPeerConfig peerConfig) throws IOException {
+  }
+
+  /**
+   * Called before remove a replication peer
+   * @param ctx
+   * @param peerId a short name that identifies the peer
+   * @throws IOException on failure
+   */
+  default void preRemoveReplicationPeer(final ObserverContext<MasterCoprocessorEnvironment> ctx,
+      String peerId) throws IOException {
+  }
+
+  /**
+   * Called after remove a replication peer
+   * @param ctx
+   * @param peerId a short name that identifies the peer
+   * @throws IOException on failure
+   */
+  default void postRemoveReplicationPeer(final ObserverContext<MasterCoprocessorEnvironment> ctx,
+      String peerId) throws IOException {
+  }
+
+  /**
+   * Called before enable a replication peer
+   * @param ctx
+   * @param peerId a short name that identifies the peer
+   * @throws IOException on failure
+   */
+  default void preEnableReplicationPeer(final ObserverContext<MasterCoprocessorEnvironment> ctx,
+      String peerId) throws IOException {
+  }
+
+  /**
+   * Called after enable a replication peer
+   * @param ctx
+   * @param peerId a short name that identifies the peer
+   * @throws IOException on failure
+   */
+  default void postEnableReplicationPeer(final ObserverContext<MasterCoprocessorEnvironment> ctx,
+      String peerId) throws IOException {
+  }
+
+  /**
+   * Called before disable a replication peer
+   * @param ctx
+   * @param peerId a short name that identifies the peer
+   * @throws IOException on failure
+   */
+  default void preDisableReplicationPeer(final ObserverContext<MasterCoprocessorEnvironment> ctx,
+      String peerId) throws IOException {
+  }
+
+  /**
+   * Called after disable a replication peer
+   * @param ctx
+   * @param peerId a short name that identifies the peer
+   * @throws IOException on failure
+   */
+  default void postDisableReplicationPeer(final ObserverContext<MasterCoprocessorEnvironment> ctx,
+      String peerId) throws IOException {
+  }
 }

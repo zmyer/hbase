@@ -18,7 +18,6 @@
  */
 package org.apache.hadoop.hbase.replication.regionserver;
 
-import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
@@ -33,10 +32,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.PriorityBlockingQueue;
@@ -58,18 +55,19 @@ import org.apache.hadoop.hbase.MetaTableAccessor;
 import org.apache.hadoop.hbase.Stoppable;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
-import org.apache.hadoop.hbase.shaded.protobuf.generated.WALProtos;
-import org.apache.hadoop.hbase.shaded.protobuf.generated.WALProtos.BulkLoadDescriptor;
-import org.apache.hadoop.hbase.shaded.protobuf.generated.WALProtos.StoreDescriptor;
 import org.apache.hadoop.hbase.regionserver.wal.WALEdit;
 import org.apache.hadoop.hbase.replication.ChainWALEntryFilter;
 import org.apache.hadoop.hbase.replication.ReplicationEndpoint;
 import org.apache.hadoop.hbase.replication.ReplicationException;
+import org.apache.hadoop.hbase.replication.ReplicationPeer;
 import org.apache.hadoop.hbase.replication.ReplicationPeers;
 import org.apache.hadoop.hbase.replication.ReplicationQueueInfo;
 import org.apache.hadoop.hbase.replication.ReplicationQueues;
 import org.apache.hadoop.hbase.replication.SystemTableWALEntryFilter;
 import org.apache.hadoop.hbase.replication.WALEntryFilter;
+import org.apache.hadoop.hbase.shaded.protobuf.generated.WALProtos;
+import org.apache.hadoop.hbase.shaded.protobuf.generated.WALProtos.BulkLoadDescriptor;
+import org.apache.hadoop.hbase.shaded.protobuf.generated.WALProtos.StoreDescriptor;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hadoop.hbase.util.CancelableProgressable;
 import org.apache.hadoop.hbase.util.EnvironmentEdgeManager;
@@ -147,8 +145,13 @@ public class ReplicationSource extends Thread
   private WALEntryFilter walEntryFilter;
   // throttler
   private ReplicationThrottler throttler;
+  private long defaultBandwidth;
+  private long currentBandwidth;
   private ConcurrentHashMap<String, ReplicationSourceWorkerThread> workerThreads =
       new ConcurrentHashMap<String, ReplicationSourceWorkerThread>();
+
+  private AtomicLong totalBufferUsed;
+  private long totalBufferQuota;
 
   /**
    * Instantiation method used by region servers
@@ -182,8 +185,6 @@ public class ReplicationSource extends Thread
     this.maxRetriesMultiplier =
         this.conf.getInt("replication.source.maxretriesmultiplier", 300); // 5 minutes @ 1 sec per
     this.queueSizePerGroup = this.conf.getInt("hbase.regionserver.maxlogs", 32);
-    long bandwidth = this.conf.getLong("replication.source.per.peer.node.bandwidth", 0);
-    this.throttler = new ReplicationThrottler((double)bandwidth/10.0);
     this.replicationQueues = replicationQueues;
     this.replicationPeers = replicationPeers;
     this.manager = manager;
@@ -199,6 +200,17 @@ public class ReplicationSource extends Thread
     this.actualPeerId = replicationQueueInfo.getPeerId();
     this.logQueueWarnThreshold = this.conf.getInt("replication.source.log.queue.warn", 2);
     this.replicationEndpoint = replicationEndpoint;
+
+    defaultBandwidth = this.conf.getLong("replication.source.per.peer.node.bandwidth", 0);
+    currentBandwidth = getCurrentBandwidth();
+    this.throttler = new ReplicationThrottler((double) currentBandwidth / 10.0);
+    this.totalBufferUsed = manager.getTotalBufferUsed();
+    this.totalBufferQuota = conf.getLong(HConstants.REPLICATION_SOURCE_TOTAL_BUFFER_KEY,
+        HConstants.REPLICATION_SOURCE_TOTAL_BUFFER_DFAULT);
+    LOG.info("peerClusterZnode=" + peerClusterZnode + ", ReplicationSource : " + peerId
+        + " inited, replicationQueueSizeCapacity=" + replicationQueueSizeCapacity
+        + ", replicationQueueNbCapacity=" + replicationQueueNbCapacity + ", curerntBandwidth="
+        + this.currentBandwidth);
   }
 
   private void decorateConf() {
@@ -320,6 +332,8 @@ public class ReplicationSource extends Thread
       this.terminate("ClusterId " + clusterId + " is replicating to itself: peerClusterId "
           + peerClusterId + " which is not allowed by ReplicationEndpoint:"
           + replicationEndpoint.getClass().getName(), null, false);
+      this.manager.closeQueue(this);
+      return;
     }
     LOG.info("Replicating " + clusterId + " -> " + peerClusterId);
     // start workers
@@ -415,9 +429,11 @@ public class ReplicationSource extends Thread
       }
       if (future != null) {
         try {
-          future.get();
+          future.get(sleepForRetries * maxRetriesMultiplier, TimeUnit.MILLISECONDS);
         } catch (Exception e) {
-          LOG.warn("Got exception:" + e);
+          LOG.warn("Got exception while waiting for endpoint to shutdown for replication source :"
+              + this.peerClusterZnode,
+            e);
         }
       }
     }
@@ -497,6 +513,13 @@ public class ReplicationSource extends Thread
     return this.metrics;
   }
 
+  private long getCurrentBandwidth() {
+    ReplicationPeer replicationPeer = this.replicationPeers.getConnectedPeer(peerId);
+    long peerBandwidth = replicationPeer != null ? replicationPeer.getPeerBandwidth() : 0;
+    // user can set peer bandwidth to 0 to use default bandwidth
+    return peerBandwidth != 0 ? peerBandwidth : defaultBandwidth;
+  }
+
   public class ReplicationSourceWorkerThread extends Thread {
     ReplicationSource source;
     String walGroupId;
@@ -518,7 +541,7 @@ public class ReplicationSource extends Thread
     private boolean workerRunning = true;
     // Current number of hfiles that we need to replicate
     private long currentNbHFiles = 0;
-
+    List<WAL.Entry> entries;
     // Use guava cache to set ttl for each key
     private LoadingCache<String, Boolean> canSkipWaitingSet = CacheBuilder.newBuilder()
         .expireAfterAccess(1, TimeUnit.DAYS).build(
@@ -538,6 +561,7 @@ public class ReplicationSource extends Thread
       this.replicationQueueInfo = replicationQueueInfo;
       this.repLogReader = new ReplicationWALReaderManager(fs, conf);
       this.source = source;
+      this.entries = new ArrayList<>();
     }
 
     @Override
@@ -610,8 +634,7 @@ public class ReplicationSource extends Thread
         boolean gotIOE = false;
         currentNbOperations = 0;
         currentNbHFiles = 0;
-        List<WAL.Entry> entries = new ArrayList<WAL.Entry>(1);
-
+        entries.clear();
         Map<String, Long> lastPositionsForSerialScope = new HashMap<>();
         currentSize = 0;
         try {
@@ -703,6 +726,7 @@ public class ReplicationSource extends Thread
           continue;
         }
         shipEdits(currentWALisBeingWrittenTo, entries, lastPositionsForSerialScope);
+        releaseBufferQuota();
       }
       if (replicationQueueInfo.isQueueRecovered()) {
         // use synchronize to make sure one last thread will clean the queue
@@ -792,7 +816,7 @@ public class ReplicationSource extends Thread
             }
           }
         }
-
+        boolean totalBufferTooLarge = false;
         // don't replicate if the log entries have already been consumed by the cluster
         if (replicationEndpoint.canReplicateToSameCluster()
             || !entry.getKey().getClusterIds().contains(peerClusterId)) {
@@ -810,15 +834,16 @@ public class ReplicationSource extends Thread
             logKey.addClusterId(clusterId);
             currentNbOperations += countDistinctRowKeys(edit);
             entries.add(entry);
-            currentSize += entry.getEdit().heapSize();
-            currentSize += calculateTotalSizeOfStoreFiles(edit);
+            int delta = (int)entry.getEdit().heapSize() + calculateTotalSizeOfStoreFiles(edit);
+            currentSize += delta;
+            totalBufferTooLarge = acquireBufferQuota(delta);
           } else {
             metrics.incrLogEditsFiltered();
           }
         }
         // Stop if too many entries or too big
         // FIXME check the relationship between single wal group and overall
-        if (currentSize >= replicationQueueSizeCapacity
+        if (totalBufferTooLarge || currentSize >= replicationQueueSizeCapacity
             || entries.size() >= replicationQueueNbCapacity) {
           break;
         }
@@ -1090,6 +1115,16 @@ public class ReplicationSource extends Thread
       return distinctRowKeys + totalHFileEntries;
     }
 
+    private void checkBandwidthChangeAndResetThrottler() {
+      long peerBandwidth = getCurrentBandwidth();
+      if (peerBandwidth != currentBandwidth) {
+        currentBandwidth = peerBandwidth;
+        throttler.setBandwidth((double) currentBandwidth / 10.0);
+        LOG.info("ReplicationSource : " + peerId
+            + " bandwidth throttling changed, currentBandWidth=" + currentBandwidth);
+      }
+    }
+
     /**
      * Do the shipping logic
      * @param currentWALisBeingWrittenTo was the current WAL being (seemingly)
@@ -1104,6 +1139,7 @@ public class ReplicationSource extends Thread
       }
       while (isWorkerActive()) {
         try {
+          checkBandwidthChangeAndResetThrottler();
           if (throttler.isEnabled()) {
             long sleepTicks = throttler.getNextSleepInterval(currentSize);
             if (sleepTicks > 0) {
@@ -1287,6 +1323,20 @@ public class ReplicationSource extends Thread
 
     public void setWorkerRunning(boolean workerRunning) {
       this.workerRunning = workerRunning;
+    }
+
+    /**
+     * @param size delta size for grown buffer
+     * @return true if we should clear buffer and push all
+     */
+    private boolean acquireBufferQuota(long size) {
+      return totalBufferUsed.addAndGet(size) >= totalBufferQuota;
+    }
+
+    private void releaseBufferQuota() {
+      totalBufferUsed.addAndGet(-currentSize);
+      currentSize = 0;
+      entries.clear();
     }
   }
 }

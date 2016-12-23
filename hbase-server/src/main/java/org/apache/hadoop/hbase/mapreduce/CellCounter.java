@@ -131,6 +131,8 @@ public class CellCounter extends Configured implements Tool {
      */
 
     @Override
+    @edu.umd.cs.findbugs.annotations.SuppressWarnings(value="NP_NULL_ON_SOME_PATH",
+      justification="Findbugs is blind to the Precondition null check")
     public void map(ImmutableBytesWritable row, Result values,
                     Context context)
         throws IOException {
@@ -303,7 +305,7 @@ public class CellCounter extends Configured implements Tool {
       System.err.println("   -D " + TableInputFormat.SCAN_ROW_START + "=<rowkey>");
       System.err.println("   -D " + TableInputFormat.SCAN_ROW_STOP + "=<rowkey>");
       System.err.println("   -D " + TableInputFormat.SCAN_COLUMNS + "=\"<col1> <col2>...\"");
-      System.err.println("   -D " + TableInputFormat.SCAN_COLUMN_FAMILY + "=<familyName>");
+      System.err.println("   -D " + TableInputFormat.SCAN_COLUMN_FAMILY + "=<family1>,<family2>, ...");
       System.err.println("   -D " + TableInputFormat.SCAN_TIMESTAMP + "=<timestamp>");
       System.err.println("   -D " + TableInputFormat.SCAN_TIMERANGE_START + "=<timestamp>");
       System.err.println("   -D " + TableInputFormat.SCAN_TIMERANGE_END + "=<timestamp>");

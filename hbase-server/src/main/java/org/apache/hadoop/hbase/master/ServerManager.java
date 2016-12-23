@@ -18,6 +18,9 @@
  */
 package org.apache.hadoop.hbase.master;
 
+import static org.apache.hadoop.hbase.util.CollectionUtils.computeIfAbsent;
+
+import com.google.common.annotations.VisibleForTesting;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.util.ArrayList;
@@ -33,7 +36,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentNavigableMap;
 import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.CopyOnWriteArrayList;
-
+import java.util.function.Predicate;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.conf.Configuration;
@@ -56,6 +59,11 @@ import org.apache.hadoop.hbase.master.procedure.MasterProcedureEnv;
 import org.apache.hadoop.hbase.master.procedure.ServerCrashProcedure;
 import org.apache.hadoop.hbase.monitoring.MonitoredTask;
 import org.apache.hadoop.hbase.procedure2.ProcedureExecutor;
+import org.apache.hadoop.hbase.regionserver.HRegionServer;
+import org.apache.hadoop.hbase.regionserver.RegionOpeningState;
+import org.apache.hadoop.hbase.security.User;
+import org.apache.hadoop.hbase.shaded.com.google.protobuf.ServiceException;
+import org.apache.hadoop.hbase.shaded.com.google.protobuf.UnsafeByteOperations;
 import org.apache.hadoop.hbase.shaded.protobuf.ProtobufUtil;
 import org.apache.hadoop.hbase.shaded.protobuf.RequestConverter;
 import org.apache.hadoop.hbase.shaded.protobuf.ResponseConverter;
@@ -63,13 +71,11 @@ import org.apache.hadoop.hbase.shaded.protobuf.generated.AdminProtos.AdminServic
 import org.apache.hadoop.hbase.shaded.protobuf.generated.AdminProtos.OpenRegionRequest;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.AdminProtos.OpenRegionResponse;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.AdminProtos.ServerInfo;
+import org.apache.hadoop.hbase.shaded.protobuf.generated.AdminProtos.UpdateFavoredNodesRequest;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.ClusterStatusProtos.RegionStoreSequenceIds;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.ClusterStatusProtos.StoreSequenceId;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.RegionServerStatusProtos.RegionServerStartupRequest;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.ZooKeeperProtos.SplitLogTask.RecoveryMode;
-import org.apache.hadoop.hbase.regionserver.HRegionServer;
-import org.apache.hadoop.hbase.regionserver.RegionOpeningState;
-import org.apache.hadoop.hbase.security.User;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hadoop.hbase.util.Pair;
 import org.apache.hadoop.hbase.util.RetryCounter;
@@ -77,12 +83,6 @@ import org.apache.hadoop.hbase.util.RetryCounterFactory;
 import org.apache.hadoop.hbase.zookeeper.ZKUtil;
 import org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher;
 import org.apache.zookeeper.KeeperException;
-
-import com.google.common.annotations.VisibleForTesting;
-
-import org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString;
-import org.apache.hadoop.hbase.shaded.com.google.protobuf.ServiceException;
-import org.apache.hadoop.hbase.shaded.com.google.protobuf.UnsafeByteOperations;
 
 /**
  * The ServerManager class manages info about region servers.
@@ -274,18 +274,6 @@ public class ServerManager {
     return sn;
   }
 
-  private ConcurrentNavigableMap<byte[], Long> getOrCreateStoreFlushedSequenceId(
-    byte[] regionName) {
-    ConcurrentNavigableMap<byte[], Long> storeFlushedSequenceId =
-        storeFlushedSequenceIdsByRegion.get(regionName);
-    if (storeFlushedSequenceId != null) {
-      return storeFlushedSequenceId;
-    }
-    storeFlushedSequenceId = new ConcurrentSkipListMap<byte[], Long>(Bytes.BYTES_COMPARATOR);
-    ConcurrentNavigableMap<byte[], Long> alreadyPut =
-        storeFlushedSequenceIdsByRegion.putIfAbsent(regionName, storeFlushedSequenceId);
-    return alreadyPut == null ? storeFlushedSequenceId : alreadyPut;
-  }
   /**
    * Updates last flushed sequence Ids for the regions on server sn
    * @param sn
@@ -310,7 +298,8 @@ public class ServerManager {
             + existingValue + ") for region " + Bytes.toString(entry.getKey()) + " Ignoring.");
       }
       ConcurrentNavigableMap<byte[], Long> storeFlushedSequenceId =
-          getOrCreateStoreFlushedSequenceId(encodedRegionName);
+          computeIfAbsent(storeFlushedSequenceIdsByRegion, encodedRegionName,
+            () -> new ConcurrentSkipListMap<>(Bytes.BYTES_COMPARATOR));
       for (StoreSequenceId storeSeqId : entry.getValue().getStoreCompleteSequenceId()) {
         byte[] family = storeSeqId.getFamilyName().toByteArray();
         existingValue = storeFlushedSequenceId.get(family);
@@ -829,6 +818,30 @@ public class ServerManager {
   }
 
   /**
+   * Sends an CLOSE RPC to the specified server to close the specified region for SPLIT.
+   * <p>
+   * A region server could reject the close request because it either does not
+   * have the specified region or the region is being split.
+   * @param server server to close a region
+   * @param regionToClose the info of the region(s) to close
+   * @throws IOException
+   */
+  public boolean sendRegionCloseForSplitOrMerge(
+      final ServerName server,
+      final HRegionInfo... regionToClose) throws IOException {
+    if (server == null) {
+      throw new NullPointerException("Passed server is null");
+    }
+    AdminService.BlockingInterface admin = getRsAdmin(server);
+    if (admin == null) {
+      throw new IOException("Attempting to send CLOSE For Split or Merge RPC to server " +
+        server.toString() + " failed because no RPC connection found to this server.");
+    }
+    HBaseRpcController controller = newRpcController();
+    return ProtobufUtil.closeRegionForSplitOrMerge(controller, admin, server, regionToClose);
+  }
+
+  /**
    * Sends a WARMUP RPC to the specified server to warmup the specified region.
    * <p>
    * A region server could reject the close request because it either does not
@@ -1061,6 +1074,27 @@ public class ServerManager {
   }
 
   /**
+   * @param keys The target server name
+   * @param idleServerPredicator Evaluates the server on the given load
+   * @return A copy of the internal list of online servers matched by the predicator
+   */
+  public List<ServerName> getOnlineServersListWithPredicator(List<ServerName> keys,
+    Predicate<ServerLoad> idleServerPredicator) {
+    List<ServerName> names = new ArrayList<>();
+    if (keys != null && idleServerPredicator != null) {
+      keys.forEach(name -> {
+        ServerLoad load = onlineServers.get(name);
+        if (load != null) {
+          if (idleServerPredicator.test(load)) {
+            names.add(name);
+          }
+        }
+      });
+    }
+    return names;
+  }
+
+  /**
    * @return A copy of the internal list of draining servers.
    */
   public List<ServerName> getDrainingServersList() {
@@ -1202,6 +1236,29 @@ public class ServerManager {
   public void removeRegions(final List<HRegionInfo> regions) {
     for (HRegionInfo hri: regions) {
       removeRegion(hri);
+    }
+  }
+
+  public void sendFavoredNodes(final ServerName server,
+      Map<HRegionInfo, List<ServerName>> favoredNodes) throws IOException {
+    AdminService.BlockingInterface admin = getRsAdmin(server);
+    if (admin == null) {
+      LOG.warn("Attempting to send favored nodes update rpc to server " + server.toString()
+          + " failed because no RPC connection found to this server");
+    } else {
+      List<Pair<HRegionInfo, List<ServerName>>> regionUpdateInfos =
+          new ArrayList<Pair<HRegionInfo, List<ServerName>>>();
+      for (Entry<HRegionInfo, List<ServerName>> entry : favoredNodes.entrySet()) {
+        regionUpdateInfos.add(new Pair<HRegionInfo, List<ServerName>>(entry.getKey(),
+          entry.getValue()));
+      }
+      UpdateFavoredNodesRequest request =
+        RequestConverter.buildUpdateFavoredNodesRequest(regionUpdateInfos);
+      try {
+        admin.updateFavoredNodes(null, request);
+      } catch (ServiceException se) {
+        throw ProtobufUtil.getRemoteException(se);
+      }
     }
   }
 }

@@ -138,7 +138,7 @@ public final class WALPerformanceEvaluation extends Configured implements Tool {
       this.numIterations = numIterations;
       this.noSync = noSync;
       this.syncInterval = syncInterval;
-      this.numFamilies = htd.getColumnFamilies().length;
+      this.numFamilies = htd.getColumnFamilyCount();
       this.region = region;
       this.htd = htd;
       scopes = new TreeMap<byte[], Integer>(
@@ -382,7 +382,7 @@ public final class WALPerformanceEvaluation extends Configured implements Tool {
         }
         if (null != roller) {
           LOG.info("shutting down log roller.");
-          Threads.shutdown(roller.getThread());
+          roller.close();
         }
         wals.shutdown();
         // Remove the root dir for this test region

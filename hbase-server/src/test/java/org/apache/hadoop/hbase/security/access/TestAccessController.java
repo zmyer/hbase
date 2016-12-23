@@ -548,7 +548,7 @@ public class TestAccessController extends SecureTestUtil {
         throws IOException {
       this.tableName = tableName;
       this.setTimeout(180000); // Timeout in 3 minutes
-      this.setOwner(env.getRequestUser().getUGI().getShortUserName());
+      this.setOwner(env.getRequestUser());
     }
 
     @Override
@@ -600,7 +600,7 @@ public class TestAccessController extends SecureTestUtil {
     final ProcedureExecutor<MasterProcedureEnv> procExec =
         TEST_UTIL.getHBaseCluster().getMaster().getMasterProcedureExecutor();
     Procedure proc = new TestTableDDLProcedure(procExec.getEnvironment(), tableName);
-    proc.setOwner(USER_OWNER.getShortName());
+    proc.setOwner(USER_OWNER);
     final long procId = procExec.submitProcedure(proc);
 
     AccessTestAction abortProcedureAction = new AccessTestAction() {
@@ -624,7 +624,7 @@ public class TestAccessController extends SecureTestUtil {
     final ProcedureExecutor<MasterProcedureEnv> procExec =
         TEST_UTIL.getHBaseCluster().getMaster().getMasterProcedureExecutor();
     Procedure proc = new TestTableDDLProcedure(procExec.getEnvironment(), tableName);
-    proc.setOwner(USER_OWNER.getShortName());
+    proc.setOwner(USER_OWNER);
     final long procId = procExec.submitProcedure(proc);
     final List<ProcedureInfo> procInfoList = procExec.listProcedures();
 
@@ -816,27 +816,15 @@ public class TestAccessController extends SecureTestUtil {
   }
 
   @Test (timeout=180000)
-  public void testSplit() throws Exception {
-    AccessTestAction action = new AccessTestAction() {
-      @Override
-      public Object run() throws Exception {
-        ACCESS_CONTROLLER.preSplit(ObserverContext.createAndPrepare(RCP_ENV, null));
-        return null;
-      }
-    };
-
-    verifyAllowed(action, SUPERUSER, USER_ADMIN, USER_OWNER, USER_GROUP_ADMIN);
-    verifyDenied(action, USER_CREATE, USER_RW, USER_RO, USER_NONE, USER_GROUP_READ,
-      USER_GROUP_WRITE, USER_GROUP_CREATE);
-  }
-
-  @Test (timeout=180000)
   public void testSplitWithSplitRow() throws Exception {
+    final TableName tname = TableName.valueOf("testSplitWithSplitRow");
+    createTestTable(tname);
     AccessTestAction action = new AccessTestAction() {
       @Override
       public Object run() throws Exception {
-        ACCESS_CONTROLLER.preSplit(
-            ObserverContext.createAndPrepare(RCP_ENV, null),
+        ACCESS_CONTROLLER.preSplitRegion(
+            ObserverContext.createAndPrepare(CP_ENV, null),
+            tname,
             TEST_ROW);
         return null;
       }
@@ -2881,5 +2869,65 @@ public class TestAccessController extends SecureTestUtil {
 
     verifyAllowed(action1, SUPERUSER, USER_ADMIN);
     verifyDenied(action1, USER_CREATE, USER_RW, USER_RO, USER_NONE, USER_OWNER);
+  }
+
+  @Test
+  public void testAddReplicationPeer() throws Exception {
+    AccessTestAction action = new AccessTestAction() {
+      @Override
+      public Object run() throws Exception {
+        ACCESS_CONTROLLER.preAddReplicationPeer(ObserverContext.createAndPrepare(CP_ENV, null),
+          "test", null);
+        return null;
+      }
+    };
+
+    verifyAllowed(action, SUPERUSER, USER_ADMIN);
+    verifyDenied(action, USER_CREATE, USER_RW, USER_RO, USER_NONE, USER_OWNER);
+  }
+
+  @Test
+  public void testRemoveReplicationPeer() throws Exception {
+    AccessTestAction action = new AccessTestAction() {
+      @Override
+      public Object run() throws Exception {
+        ACCESS_CONTROLLER.preRemoveReplicationPeer(ObserverContext.createAndPrepare(CP_ENV, null),
+          "test");
+        return null;
+      }
+    };
+
+    verifyAllowed(action, SUPERUSER, USER_ADMIN);
+    verifyDenied(action, USER_CREATE, USER_RW, USER_RO, USER_NONE, USER_OWNER);
+  }
+
+  @Test
+  public void testEnableReplicationPeer() throws Exception {
+    AccessTestAction action = new AccessTestAction() {
+      @Override
+      public Object run() throws Exception {
+        ACCESS_CONTROLLER.preEnableReplicationPeer(ObserverContext.createAndPrepare(CP_ENV, null),
+          "test");
+        return null;
+      }
+    };
+
+    verifyAllowed(action, SUPERUSER, USER_ADMIN);
+    verifyDenied(action, USER_CREATE, USER_RW, USER_RO, USER_NONE, USER_OWNER);
+  }
+
+  @Test
+  public void testDisableReplicationPeer() throws Exception {
+    AccessTestAction action = new AccessTestAction() {
+      @Override
+      public Object run() throws Exception {
+        ACCESS_CONTROLLER.preDisableReplicationPeer(ObserverContext.createAndPrepare(CP_ENV, null),
+          "test");
+        return null;
+      }
+    };
+
+    verifyAllowed(action, SUPERUSER, USER_ADMIN);
+    verifyDenied(action, USER_CREATE, USER_RW, USER_RO, USER_NONE, USER_OWNER);
   }
 }

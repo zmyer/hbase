@@ -33,12 +33,15 @@ import org.apache.hadoop.hbase.TableDescriptors;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.ClusterConnection;
 import org.apache.hadoop.hbase.executor.ExecutorService;
+import org.apache.hadoop.hbase.favored.FavoredNodesManager;
 import org.apache.hadoop.hbase.master.normalizer.RegionNormalizer;
 import org.apache.hadoop.hbase.master.procedure.MasterProcedureEnv;
 import org.apache.hadoop.hbase.master.snapshot.SnapshotManager;
 import org.apache.hadoop.hbase.procedure.MasterProcedureManagerHost;
 import org.apache.hadoop.hbase.procedure2.ProcedureExecutor;
 import org.apache.hadoop.hbase.quotas.MasterQuotaManager;
+import org.apache.hadoop.hbase.replication.ReplicationException;
+import org.apache.hadoop.hbase.replication.ReplicationPeerConfig;
 import org.apache.hadoop.hbase.security.User;
 import org.apache.hadoop.hbase.zookeeper.MetaTableLocator;
 import org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher;
@@ -287,6 +290,24 @@ public class MockNoopMasterServices implements MasterServices, Server {
   }
 
   @Override
+  public long mergeRegions(
+      final HRegionInfo[] regionsToMerge,
+      final boolean forcible,
+      final long nonceGroup,
+      final long nonce) throws IOException {
+    return -1;
+  }
+
+  @Override
+  public long splitRegion(
+      final HRegionInfo regionInfo,
+      final byte[] splitRow,
+      final long nonceGroup,
+      final long nonce) throws IOException {
+    return -1;
+  }
+
+  @Override
   public TableLockManager getTableLockManager() {
     return null;
   }
@@ -348,6 +369,11 @@ public class MockNoopMasterServices implements MasterServices, Server {
   }
 
   @Override
+  public FavoredNodesManager getFavoredNodesManager() {
+    return null;
+  }
+
+  @Override
   public SnapshotManager getSnapshotManager() {
     return null;
   }
@@ -355,5 +381,22 @@ public class MockNoopMasterServices implements MasterServices, Server {
    @Override
   public MasterProcedureManagerHost getMasterProcedureManagerHost() {
     return null;
+  }
+
+  @Override
+  public void addReplicationPeer(String peerId, ReplicationPeerConfig peerConfig)
+      throws ReplicationException {
+  }
+
+  @Override
+  public void removeReplicationPeer(String peerId) throws ReplicationException {
+  }
+
+  @Override
+  public void enableReplicationPeer(String peerId) throws ReplicationException, IOException {
+  }
+
+  @Override
+  public void disableReplicationPeer(String peerId) throws ReplicationException, IOException {
   }
 }

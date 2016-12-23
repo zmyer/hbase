@@ -30,6 +30,7 @@ import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.hbase.client.Admin;
 import org.apache.hadoop.hbase.client.Table;
+import org.apache.hadoop.hbase.regionserver.CompactingMemStore;
 import org.apache.hadoop.hbase.shaded.protobuf.ProtobufUtil;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.WALProtos.CompactionDescriptor;
 import org.apache.hadoop.hbase.regionserver.ConstantSizeRegionSplitPolicy;
@@ -241,7 +242,7 @@ public class TestIOFencing {
     // Insert our custom region
     c.setClass(HConstants.REGION_IMPL, regionClass, HRegion.class);
     // Encourage plenty of flushes
-    c.setLong("hbase.hregion.memstore.flush.size", 100000);
+    c.setLong("hbase.hregion.memstore.flush.size", 25000);
     c.set(HConstants.HBASE_REGION_SPLIT_POLICY_KEY, ConstantSizeRegionSplitPolicy.class.getName());
     // Only run compaction when we tell it to
     c.setInt("hbase.hstore.compaction.min",1);
@@ -249,6 +250,8 @@ public class TestIOFencing {
     c.setLong("hbase.hstore.blockingStoreFiles", 1000);
     // Compact quickly after we tell it to!
     c.setInt("hbase.regionserver.thread.splitcompactcheckfrequency", 1000);
+    c.set(CompactingMemStore.COMPACTING_MEMSTORE_TYPE_KEY,
+        String.valueOf(HColumnDescriptor.MemoryCompaction.NONE));
     LOG.info("Starting mini cluster");
     TEST_UTIL.startMiniCluster(1);
     CompactionBlockerRegion compactingRegion = null;

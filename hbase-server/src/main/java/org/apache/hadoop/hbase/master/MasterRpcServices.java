@@ -43,6 +43,7 @@ import org.apache.hadoop.hbase.UnknownRegionException;
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
 import org.apache.hadoop.hbase.client.MasterSwitchType;
 import org.apache.hadoop.hbase.client.TableState;
+import org.apache.hadoop.hbase.client.replication.ReplicationSerDeHelper;
 import org.apache.hadoop.hbase.errorhandling.ForeignException;
 import org.apache.hadoop.hbase.exceptions.UnknownProtocolException;
 import org.apache.hadoop.hbase.ipc.CoprocessorRpcUtils;
@@ -66,6 +67,7 @@ import org.apache.hadoop.hbase.shaded.protobuf.generated.ClusterStatusProtos.Reg
 import org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NameStringPair;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ProcedureDescription;
+import org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionSpecifier.RegionSpecifierType;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos;
@@ -83,7 +85,18 @@ import org.apache.hadoop.hbase.shaded.protobuf.generated.RegionServerStatusProto
 import org.apache.hadoop.hbase.shaded.protobuf.generated.RegionServerStatusProtos.ReportRSFatalErrorResponse;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.RegionServerStatusProtos.ReportRegionStateTransitionRequest;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.RegionServerStatusProtos.ReportRegionStateTransitionResponse;
+import org.apache.hadoop.hbase.shaded.protobuf.generated.RegionServerStatusProtos.SplitTableRegionRequest;
+import org.apache.hadoop.hbase.shaded.protobuf.generated.RegionServerStatusProtos.SplitTableRegionResponse;
+import org.apache.hadoop.hbase.shaded.protobuf.generated.ReplicationProtos.AddReplicationPeerRequest;
+import org.apache.hadoop.hbase.shaded.protobuf.generated.ReplicationProtos.AddReplicationPeerResponse;
+import org.apache.hadoop.hbase.shaded.protobuf.generated.ReplicationProtos.DisableReplicationPeerRequest;
+import org.apache.hadoop.hbase.shaded.protobuf.generated.ReplicationProtos.DisableReplicationPeerResponse;
+import org.apache.hadoop.hbase.shaded.protobuf.generated.ReplicationProtos.EnableReplicationPeerRequest;
+import org.apache.hadoop.hbase.shaded.protobuf.generated.ReplicationProtos.EnableReplicationPeerResponse;
+import org.apache.hadoop.hbase.shaded.protobuf.generated.ReplicationProtos.RemoveReplicationPeerRequest;
+import org.apache.hadoop.hbase.shaded.protobuf.generated.ReplicationProtos.RemoveReplicationPeerResponse;
 import org.apache.hadoop.hbase.regionserver.RSRpcServices;
+import org.apache.hadoop.hbase.replication.ReplicationException;
 import org.apache.hadoop.hbase.security.User;
 import org.apache.hadoop.hbase.security.access.AccessController;
 import org.apache.hadoop.hbase.security.visibility.VisibilityController;
@@ -546,6 +559,62 @@ public class MasterRpcServices extends RSRpcServices
       return EnableTableResponse.newBuilder().setProcId(procId).build();
     } catch (IOException ioe) {
       throw new ServiceException(ioe);
+    }
+  }
+
+  @Override
+  public MergeTableRegionsResponse mergeTableRegions(
+      RpcController c, MergeTableRegionsRequest request) throws ServiceException {
+    try {
+      master.checkInitialized();
+    } catch (IOException ioe) {
+      throw new ServiceException(ioe);
+    }
+
+    RegionStates regionStates = master.getAssignmentManager().getRegionStates();
+
+    assert(request.getRegionCount() == 2);
+    HRegionInfo[] regionsToMerge = new HRegionInfo[request.getRegionCount()];
+    for (int i = 0; i < request.getRegionCount(); i++) {
+      final byte[] encodedNameOfRegion = request.getRegion(i).getValue().toByteArray();
+      if (request.getRegion(i).getType() != RegionSpecifierType.ENCODED_REGION_NAME) {
+        LOG.warn("MergeRegions specifier type: expected: "
+          + RegionSpecifierType.ENCODED_REGION_NAME + " actual: region " + i + " ="
+          + request.getRegion(i).getType());
+      }
+      RegionState regionState = regionStates.getRegionState(Bytes.toString(encodedNameOfRegion));
+      if (regionState == null) {
+        throw new ServiceException(
+          new UnknownRegionException(Bytes.toStringBinary(encodedNameOfRegion)));
+      }
+      regionsToMerge[i] = regionState.getRegion();
+    }
+
+    try {
+      long procId = master.mergeRegions(
+        regionsToMerge,
+        request.getForcible(),
+        request.getNonceGroup(),
+        request.getNonce());
+      return MergeTableRegionsResponse.newBuilder().setProcId(procId).build();
+    } catch (IOException ioe) {
+      throw new ServiceException(ioe);
+    }
+  }
+
+  @Override
+  public SplitTableRegionResponse splitRegion(
+      final RpcController controller,
+      final SplitTableRegionRequest request) throws ServiceException {
+    try {
+      long procId = master.splitRegion(
+        HRegionInfo.convert(request.getRegionInfo()),
+        request.getSplitRow().toByteArray(),
+        request.getNonceGroup(),
+        request.getNonce());
+      return SplitTableRegionResponse.newBuilder().setProcId(procId).build();
+    } catch (IOException ie) {
+      throw new ServiceException(ie);
     }
   }
 
@@ -1140,16 +1209,8 @@ public class MasterRpcServices extends RSRpcServices
   public RestoreSnapshotResponse restoreSnapshot(RpcController controller,
       RestoreSnapshotRequest request) throws ServiceException {
     try {
-      master.checkInitialized();
-      master.snapshotManager.checkSnapshotSupport();
-
-      // Ensure namespace exists. Will throw exception if non-known NS.
-      TableName dstTable = TableName.valueOf(request.getSnapshot().getTable());
-      master.getClusterSchema().getNamespace(dstTable.getNamespaceAsString());
-
-      SnapshotDescription reqSnapshot = request.getSnapshot();
-      long procId = master.snapshotManager.restoreOrCloneSnapshot(
-        reqSnapshot, request.getNonceGroup(), request.getNonce());
+      long procId = master.restoreSnapshot(request.getSnapshot(),
+          request.getNonceGroup(), request.getNonce());
       return RestoreSnapshotResponse.newBuilder().setProcId(procId).build();
     } catch (ForeignException e) {
       throw new ServiceException(e.getCause());
@@ -1296,15 +1357,16 @@ public class MasterRpcServices extends RSRpcServices
     try {
       master.checkServiceStarted();
       RegionStateTransition rt = req.getTransition(0);
-      TableName tableName = ProtobufUtil.toTableName(
-        rt.getRegionInfo(0).getTableName());
       RegionStates regionStates = master.getAssignmentManager().getRegionStates();
-      if (!(TableName.META_TABLE_NAME.equals(tableName)
-          && regionStates.getRegionState(HRegionInfo.FIRST_META_REGIONINFO) != null)
-            && !master.getAssignmentManager().isFailoverCleanupDone()) {
-        // Meta region is assigned before master finishes the
-        // failover cleanup. So no need this check for it
-        throw new PleaseHoldException("Master is rebuilding user regions");
+      for (RegionInfo ri : rt.getRegionInfoList())  {
+        TableName tableName = ProtobufUtil.toTableName(ri.getTableName());
+        if (!(TableName.META_TABLE_NAME.equals(tableName)
+            && regionStates.getRegionState(HRegionInfo.FIRST_META_REGIONINFO) != null)
+              && !master.getAssignmentManager().isFailoverCleanupDone()) {
+          // Meta region is assigned before master finishes the
+          // failover cleanup. So no need this check for it
+          throw new PleaseHoldException("Master is rebuilding user regions");
+        }
       }
       ServerName sn = ProtobufUtil.toServerName(req.getServer());
       String error = master.getAssignmentManager().onRegionTransition(sn, rt);
@@ -1585,5 +1647,50 @@ public class MasterRpcServices extends RSRpcServices
         break;
     }
     return null;
+  }
+
+  @Override
+  public AddReplicationPeerResponse addReplicationPeer(RpcController controller,
+      AddReplicationPeerRequest request) throws ServiceException {
+    try {
+      master.addReplicationPeer(request.getPeerId(),
+        ReplicationSerDeHelper.convert(request.getPeerConfig()));
+      return AddReplicationPeerResponse.newBuilder().build();
+    } catch (ReplicationException | IOException e) {
+      throw new ServiceException(e);
+    }
+  }
+
+  @Override
+  public RemoveReplicationPeerResponse removeReplicationPeer(RpcController controller,
+      RemoveReplicationPeerRequest request) throws ServiceException {
+    try {
+      master.removeReplicationPeer(request.getPeerId());
+      return RemoveReplicationPeerResponse.newBuilder().build();
+    } catch (ReplicationException | IOException e) {
+      throw new ServiceException(e);
+    }
+  }
+
+  @Override
+  public EnableReplicationPeerResponse enableReplicationPeer(RpcController controller,
+      EnableReplicationPeerRequest request) throws ServiceException {
+    try {
+      master.enableReplicationPeer(request.getPeerId());
+      return EnableReplicationPeerResponse.newBuilder().build();
+    } catch (ReplicationException | IOException e) {
+      throw new ServiceException(e);
+    }
+  }
+
+  @Override
+  public DisableReplicationPeerResponse disableReplicationPeer(RpcController controller,
+      DisableReplicationPeerRequest request) throws ServiceException {
+    try {
+      master.disableReplicationPeer(request.getPeerId());
+      return DisableReplicationPeerResponse.newBuilder().build();
+    } catch (ReplicationException | IOException e) {
+      throw new ServiceException(e);
+    }
   }
 }

@@ -30,30 +30,32 @@ import java.util.UUID;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.hadoop.hbase.CellUtil;
-import org.apache.hadoop.hbase.classification.InterfaceAudience;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FSDataInputStream;
 import org.apache.hadoop.fs.FSDataOutputStream;
 import org.apache.hadoop.fs.FileStatus;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.FileUtil;
+import org.apache.hadoop.fs.LocatedFileStatus;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.fs.permission.FsPermission;
 import org.apache.hadoop.hbase.Cell;
+import org.apache.hadoop.hbase.CellUtil;
 import org.apache.hadoop.hbase.HColumnDescriptor;
 import org.apache.hadoop.hbase.HConstants;
 import org.apache.hadoop.hbase.HRegionInfo;
 import org.apache.hadoop.hbase.HTableDescriptor;
-import org.apache.hadoop.hbase.KeyValue;
-import org.apache.hadoop.hbase.KeyValueUtil;
 import org.apache.hadoop.hbase.backup.HFileArchiver;
+import org.apache.hadoop.hbase.classification.InterfaceAudience;
 import org.apache.hadoop.hbase.fs.HFileSystem;
 import org.apache.hadoop.hbase.io.Reference;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hadoop.hbase.util.FSHDFSUtils;
 import org.apache.hadoop.hbase.util.FSUtils;
+import org.apache.hadoop.hbase.util.Pair;
 import org.apache.hadoop.hbase.util.ServerRegionReplicaUtil;
+
+import com.google.common.collect.Lists;
 
 /**
  * View to an on-disk Region.
@@ -221,6 +223,36 @@ public class HRegionFileSystem {
   }
 
   /**
+   * Returns the store files' LocatedFileStatus which available for the family.
+   * This methods performs the filtering based on the valid store files.
+   * @param familyName Column Family Name
+   * @return a list of store files' LocatedFileStatus for the specified family.
+   */
+  public static List<LocatedFileStatus> getStoreFilesLocatedStatus(
+      final HRegionFileSystem regionfs, final String familyName,
+      final boolean validate) throws IOException {
+    Path familyDir = regionfs.getStoreDir(familyName);
+    List<LocatedFileStatus> locatedFileStatuses = FSUtils.listLocatedStatus(
+        regionfs.getFileSystem(), familyDir);
+    if (locatedFileStatuses == null) {
+      if (LOG.isTraceEnabled()) {
+        LOG.trace("No StoreFiles for: " + familyDir);
+      }
+      return null;
+    }
+
+    List<LocatedFileStatus> validStoreFiles = Lists.newArrayList();
+    for (LocatedFileStatus status : locatedFileStatuses) {
+      if (validate && !StoreFileInfo.isValid(status)) {
+        LOG.warn("Invalid StoreFile: " + status.getPath());
+      } else {
+        validStoreFiles.add(status);
+      }
+    }
+    return validStoreFiles;
+  }
+
+  /**
    * Return Qualified Path of the specified family/file
    *
    * @param familyName Column Family Name
@@ -365,19 +397,21 @@ public class HRegionFileSystem {
    * @throws IOException
    */
   public Path commitStoreFile(final String familyName, final Path buildPath) throws IOException {
-    return commitStoreFile(familyName, buildPath, -1, false);
+    Path dstPath = preCommitStoreFile(familyName, buildPath, -1, false);
+    return commitStoreFile(buildPath, dstPath);
   }
 
   /**
-   * Move the file from a build/temp location to the main family store directory.
+   * Generate the filename in the main family store directory for moving the file from a build/temp
+   *  location.
    * @param familyName Family that will gain the file
    * @param buildPath {@link Path} to the file to commit.
    * @param seqNum Sequence Number to append to the file name (less then 0 if no sequence number)
    * @param generateNewName False if you want to keep the buildPath name
-   * @return The new {@link Path} of the committed file
+   * @return The new {@link Path} of the to be committed file
    * @throws IOException
    */
-  private Path commitStoreFile(final String familyName, final Path buildPath,
+  private Path preCommitStoreFile(final String familyName, final Path buildPath,
       final long seqNum, final boolean generateNewName) throws IOException {
     Path storeDir = getStoreDir(familyName);
     if(!fs.exists(storeDir) && !createDir(storeDir))
@@ -394,13 +428,23 @@ public class HRegionFileSystem {
     if (LOG.isDebugEnabled()) {
       LOG.debug("Committing store file " + buildPath + " as " + dstPath);
     }
+    return dstPath;
+  }
+
+  /*
+   * Moves file from staging dir to region dir
+   * @param buildPath {@link Path} to the file to commit.
+   * @param dstPath {@link Path} to the file under region dir
+   * @return The {@link Path} of the committed file
+   * @throws IOException
+   */
+  Path commitStoreFile(final Path buildPath, Path dstPath) throws IOException {
     // buildPath exists, therefore not doing an exists() check.
     if (!rename(buildPath, dstPath)) {
       throw new IOException("Failed rename of " + buildPath + " to " + dstPath);
     }
     return dstPath;
   }
-
 
   /**
    * Moves multiple store files to the relative region's family store directory.
@@ -451,7 +495,7 @@ public class HRegionFileSystem {
    * @return The destination {@link Path} of the bulk loaded file
    * @throws IOException
    */
-  Path bulkLoadStoreFile(final String familyName, Path srcPath, long seqNum)
+  Pair<Path, Path> bulkLoadStoreFile(final String familyName, Path srcPath, long seqNum)
       throws IOException {
     // Copy the file if it's on another filesystem
     FileSystem srcFs = srcPath.getFileSystem(conf);
@@ -469,7 +513,7 @@ public class HRegionFileSystem {
       srcPath = tmpPath;
     }
 
-    return commitStoreFile(familyName, srcPath, seqNum, true);
+    return new Pair<>(srcPath, preCommitStoreFile(familyName, srcPath, seqNum, true));
   }
 
   // ===========================================================================
@@ -480,7 +524,7 @@ public class HRegionFileSystem {
     return new Path(getRegionDir(), REGION_SPLITS_DIR);
   }
 
-  Path getSplitsDir(final HRegionInfo hri) {
+  public Path getSplitsDir(final HRegionInfo hri) {
     return new Path(getSplitsDir(), hri.getEncodedName());
   }
 
@@ -539,7 +583,7 @@ public class HRegionFileSystem {
    * @param regionInfo                 daughter {@link org.apache.hadoop.hbase.HRegionInfo}
    * @throws IOException
    */
-  Path commitDaughterRegion(final HRegionInfo regionInfo)
+  public Path commitDaughterRegion(final HRegionInfo regionInfo)
       throws IOException {
     Path regionDir = new Path(this.tableDir, regionInfo.getEncodedName());
     Path daughterTmpDir = this.getSplitsDir(regionInfo);
@@ -563,7 +607,7 @@ public class HRegionFileSystem {
   /**
    * Create the region splits directory.
    */
-  void createSplitsDir() throws IOException {
+  public void createSplitsDir() throws IOException {
     Path splitdir = getSplitsDir();
     if (fs.exists(splitdir)) {
       LOG.info("The " + splitdir + " directory exists.  Hence deleting it to recreate it");
@@ -590,12 +634,15 @@ public class HRegionFileSystem {
    * @return Path to created reference.
    * @throws IOException
    */
-  Path splitStoreFile(final HRegionInfo hri, final String familyName, final StoreFile f,
+  public Path splitStoreFile(final HRegionInfo hri, final String familyName, final StoreFile f,
       final byte[] splitRow, final boolean top, RegionSplitPolicy splitPolicy)
           throws IOException {
     if (splitPolicy == null || !splitPolicy.skipStoreFileRangeCheck(familyName)) {
       // Check whether the split row lies in the range of the store file
       // If it is outside the range, return directly.
+      if (f.getReader() == null) {
+        f.createReader();
+      }
       try {
         if (top) {
           //check if larger than last key.
@@ -644,7 +691,7 @@ public class HRegionFileSystem {
   //  Merge Helpers
   // ===========================================================================
   /** @return {@link Path} to the temp directory used during merge operations */
-  Path getMergesDir() {
+  public Path getMergesDir() {
     return new Path(getRegionDir(), REGION_MERGES_DIR);
   }
 
@@ -664,7 +711,7 @@ public class HRegionFileSystem {
    * @param mergedRegion {@link HRegionInfo}
    * @throws IOException
    */
-  void cleanupMergedRegion(final HRegionInfo mergedRegion) throws IOException {
+  public void cleanupMergedRegion(final HRegionInfo mergedRegion) throws IOException {
     Path regionDir = new Path(this.tableDir, mergedRegion.getEncodedName());
     if (this.fs.exists(regionDir) && !this.fs.delete(regionDir, true)) {
       throw new IOException("Failed delete of " + regionDir);
@@ -676,7 +723,7 @@ public class HRegionFileSystem {
    * @throws IOException If merges dir already exists or we fail to create it.
    * @see HRegionFileSystem#cleanupMergesDir()
    */
-  void createMergesDir() throws IOException {
+  public void createMergesDir() throws IOException {
     Path mergesdir = getMergesDir();
     if (fs.exists(mergesdir)) {
       LOG.info("The " + mergesdir
@@ -700,7 +747,7 @@ public class HRegionFileSystem {
    * @return Path to created reference.
    * @throws IOException
    */
-  Path mergeStoreFile(final HRegionInfo mergedRegion, final String familyName,
+  public Path mergeStoreFile(final HRegionInfo mergedRegion, final String familyName,
       final StoreFile f, final Path mergedDir)
       throws IOException {
     Path referenceDir = new Path(new Path(mergedDir,
@@ -725,7 +772,7 @@ public class HRegionFileSystem {
    * @param mergedRegionInfo merged region {@link HRegionInfo}
    * @throws IOException
    */
-  void commitMergedRegion(final HRegionInfo mergedRegionInfo) throws IOException {
+  public void commitMergedRegion(final HRegionInfo mergedRegionInfo) throws IOException {
     Path regionDir = new Path(this.tableDir, mergedRegionInfo.getEncodedName());
     Path mergedRegionTmpDir = this.getMergesDir(mergedRegionInfo);
     // Move the tmp dir in the expected location

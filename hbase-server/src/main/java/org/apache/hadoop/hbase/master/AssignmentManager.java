@@ -61,7 +61,6 @@ import org.apache.hadoop.hbase.RegionLocations;
 import org.apache.hadoop.hbase.RegionStateListener;
 import org.apache.hadoop.hbase.ServerName;
 import org.apache.hadoop.hbase.TableName;
-import org.apache.hadoop.hbase.TableNotFoundException;
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
 import org.apache.hadoop.hbase.client.MasterSwitchType;
 import org.apache.hadoop.hbase.client.RegionReplicaUtil;
@@ -70,12 +69,11 @@ import org.apache.hadoop.hbase.client.TableState;
 import org.apache.hadoop.hbase.executor.EventHandler;
 import org.apache.hadoop.hbase.executor.EventType;
 import org.apache.hadoop.hbase.executor.ExecutorService;
+import org.apache.hadoop.hbase.favored.FavoredNodesPromoter;
 import org.apache.hadoop.hbase.ipc.FailedServerException;
 import org.apache.hadoop.hbase.ipc.RpcClient;
 import org.apache.hadoop.hbase.ipc.ServerNotRunningYetException;
 import org.apache.hadoop.hbase.master.RegionState.State;
-import org.apache.hadoop.hbase.master.balancer.FavoredNodeAssignmentHelper;
-import org.apache.hadoop.hbase.master.balancer.FavoredNodeLoadBalancer;
 import org.apache.hadoop.hbase.master.normalizer.NormalizationPlan.PlanType;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.RegionServerStatusProtos.RegionStateTransition;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.RegionServerStatusProtos.RegionStateTransition.TransitionCode;
@@ -230,10 +228,6 @@ public class AssignmentManager {
     this.regionsToReopen = Collections.synchronizedMap
                            (new HashMap<String, HRegionInfo> ());
     Configuration conf = server.getConfiguration();
-    // Only read favored nodes if using the favored nodes load balancer.
-    this.shouldAssignRegionsWithFavoredNodes = conf.getClass(
-           HConstants.HBASE_MASTER_LOADBALANCER_CLASS, Object.class).equals(
-           FavoredNodeLoadBalancer.class);
 
     this.tableStateManager = tableStateManager;
 
@@ -243,6 +237,8 @@ public class AssignmentManager {
     this.sleepTimeBeforeRetryingMetaAssignment = this.server.getConfiguration().getLong(
         "hbase.meta.assignment.retry.sleeptime", 1000l);
     this.balancer = balancer;
+    // Only read favored nodes if using the favored nodes load balancer.
+    this.shouldAssignRegionsWithFavoredNodes = this.balancer instanceof FavoredNodesPromoter;
     int maxThreads = conf.getInt("hbase.assignment.threads.max", 30);
 
     this.threadPoolExecutorService = Threads.getBoundedCachedThreadPool(
@@ -611,7 +607,7 @@ public class AssignmentManager {
       if (files[i].isFile() && files[i].getLen() > 0) {
         LOG.debug(dir + " has a non-empty file: " + files[i].getPath());
         return true;
-      } else if (files[i].isDirectory() && checkWals(fs, dir)) {
+      } else if (files[i].isDirectory() && checkWals(fs, files[i].getPath())) {
         LOG.debug(dir + " is a directory and has a non-empty file: " + files[i].getPath());
         return true;
       }
@@ -630,23 +626,21 @@ public class AssignmentManager {
     }
   }
 
-  // TODO: processFavoredNodes might throw an exception, for e.g., if the
-  // meta could not be contacted/updated. We need to see how seriously to treat
-  // this problem as. Should we fail the current assignment. We should be able
-  // to recover from this problem eventually (if the meta couldn't be updated
-  // things should work normally and eventually get fixed up).
-  void processFavoredNodes(List<HRegionInfo> regions) throws IOException {
-    if (!shouldAssignRegionsWithFavoredNodes) return;
-    // The AM gets the favored nodes info for each region and updates the meta
-    // table with that info
-    Map<HRegionInfo, List<ServerName>> regionToFavoredNodes =
-        new HashMap<HRegionInfo, List<ServerName>>();
-    for (HRegionInfo region : regions) {
-      regionToFavoredNodes.put(region,
-          ((FavoredNodeLoadBalancer)this.balancer).getFavoredNodes(region));
+  void processFavoredNodesForDaughters(HRegionInfo parent,
+    HRegionInfo regionA, HRegionInfo regionB) throws IOException {
+    if (shouldAssignRegionsWithFavoredNodes) {
+      List<ServerName> onlineServers = this.serverManager.getOnlineServersList();
+      ((FavoredNodesPromoter) this.balancer).
+          generateFavoredNodesForDaughter(onlineServers, parent, regionA, regionB);
     }
-    FavoredNodeAssignmentHelper.updateMetaWithFavoredNodesInfo(regionToFavoredNodes,
-      this.server.getConnection());
+  }
+
+  void processFavoredNodesForMerge(HRegionInfo merged, HRegionInfo regionA, HRegionInfo regionB)
+    throws IOException {
+    if (shouldAssignRegionsWithFavoredNodes) {
+      ((FavoredNodesPromoter)this.balancer).
+        generateFavoredNodesForMergedRegion(merged, regionA, regionB);
+    }
   }
 
   /**
@@ -807,7 +801,7 @@ public class AssignmentManager {
             region, State.PENDING_OPEN, destination);
           List<ServerName> favoredNodes = ServerName.EMPTY_SERVER_LIST;
           if (this.shouldAssignRegionsWithFavoredNodes) {
-            favoredNodes = ((FavoredNodeLoadBalancer)this.balancer).getFavoredNodes(region);
+            favoredNodes = server.getFavoredNodesManager().getFavoredNodes(region);
           }
           regionOpenInfos.add(new Pair<HRegionInfo, List<ServerName>>(
             region, favoredNodes));
@@ -1115,7 +1109,7 @@ public class AssignmentManager {
         try {
           List<ServerName> favoredNodes = ServerName.EMPTY_SERVER_LIST;
           if (this.shouldAssignRegionsWithFavoredNodes) {
-            favoredNodes = ((FavoredNodeLoadBalancer)this.balancer).getFavoredNodes(region);
+            favoredNodes = server.getFavoredNodesManager().getFavoredNodes(region);
           }
           serverManager.sendRegionOpen(plan.getDestination(), region, favoredNodes);
           return; // we're done
@@ -1299,15 +1293,6 @@ public class AssignmentManager {
         } catch (IOException ex) {
           LOG.warn("Failed to create new plan.",ex);
           return null;
-        }
-        if (!region.isMetaTable() && shouldAssignRegionsWithFavoredNodes) {
-          List<HRegionInfo> regions = new ArrayList<HRegionInfo>(1);
-          regions.add(region);
-          try {
-            processFavoredNodes(regions);
-          } catch (IOException ie) {
-            LOG.warn("Ignoring exception in processFavoredNodes " + ie);
-          }
         }
         this.regionPlans.put(encodedName, randomPlan);
       }
@@ -1580,7 +1565,6 @@ public class AssignmentManager {
 
     processBogusAssignments(bulkPlan);
 
-    processFavoredNodes(regions);
     assign(regions.size(), servers.size(), "round-robin=true", bulkPlan);
   }
 
@@ -1870,7 +1854,8 @@ public class AssignmentManager {
                 }
                 List<ServerName> favoredNodes = ServerName.EMPTY_SERVER_LIST;
                 if (shouldAssignRegionsWithFavoredNodes) {
-                  favoredNodes = ((FavoredNodeLoadBalancer)balancer).getFavoredNodes(hri);
+                  favoredNodes =
+                    ((MasterServices)server).getFavoredNodesManager().getFavoredNodes(hri);
                 }
                 serverManager.sendRegionOpen(serverName, hri, favoredNodes);
                 return; // we're done
@@ -2425,11 +2410,45 @@ public class AssignmentManager {
 
     try {
       regionStates.splitRegion(hri, a, b, serverName);
+      processFavoredNodesForDaughters(hri, a ,b);
     } catch (IOException ioe) {
       LOG.info("Failed to record split region " + hri.getShortNameToLog());
       return "Failed to record the splitting in meta";
     }
     return null;
+  }
+
+  public void assignDaughterRegions(
+      final HRegionInfo parentHRI,
+      final HRegionInfo daughterAHRI,
+      final HRegionInfo daughterBHRI) throws InterruptedException, IOException {
+    //Offline the parent region
+    regionOffline(parentHRI, State.SPLIT);
+
+    //Set daughter regions to offline
+    regionStates.prepareAssignDaughters(daughterAHRI, daughterBHRI);
+
+    // Assign daughter regions
+    invokeAssign(daughterAHRI);
+    invokeAssign(daughterBHRI);
+
+    Callable<Object> splitReplicasCallable = new Callable<Object>() {
+      @Override
+      public Object call() {
+        doSplittingOfReplicas(parentHRI, daughterAHRI, daughterBHRI);
+        return null;
+      }
+    };
+    threadPoolExecutorService.submit(splitReplicasCallable);
+
+    // wait for assignment completion
+    ArrayList<HRegionInfo> regionAssignSet = new ArrayList<HRegionInfo>(2);
+    regionAssignSet.add(daughterAHRI);
+    regionAssignSet.add(daughterBHRI);
+    while (!waitForAssignment(regionAssignSet, true, regionAssignSet.size(),
+      Long.MAX_VALUE)) {
+      LOG.debug("some user regions are still in transition: " + regionAssignSet);
+    }
   }
 
   private String onRegionSplit(final RegionState current, final HRegionInfo hri,
@@ -2598,6 +2617,39 @@ public class AssignmentManager {
     return null;
   }
 
+  public void assignMergedRegion(
+      final HRegionInfo mergedRegion,
+      final HRegionInfo daughterAHRI,
+      final HRegionInfo daughterBHRI) throws InterruptedException, IOException {
+    //Offline the daughter regions
+    regionOffline(daughterAHRI, State.MERGED);
+    regionOffline(daughterBHRI, State.MERGED);
+
+    //Set merged region to offline
+    regionStates.prepareAssignMergedRegion(mergedRegion);
+
+    // Assign merged region
+    invokeAssign(mergedRegion);
+
+    Callable<Object> mergeReplicasCallable = new Callable<Object>() {
+      @Override
+      public Object call() {
+        doMergingOfReplicas(mergedRegion, daughterAHRI, daughterBHRI);
+        return null;
+      }
+    };
+    threadPoolExecutorService.submit(mergeReplicasCallable);
+
+    // wait for assignment completion
+    ArrayList<HRegionInfo> regionAssignSet = new ArrayList<HRegionInfo>(1);
+    regionAssignSet.add(mergedRegion);
+    while (!waitForAssignment(regionAssignSet, true, regionAssignSet.size(), Long.MAX_VALUE)) {
+      LOG.debug("The merged region " + mergedRegion + " is still in transition. ");
+    }
+
+    regionStateListener.onRegionMerged(mergedRegion);
+  }
+
   private String onRegionMerged(final RegionState current, final HRegionInfo hri,
       final ServerName serverName, final RegionStateTransition transition) {
     // The region must be in merging_new state, and the daughters must be
@@ -2626,6 +2678,26 @@ public class AssignmentManager {
     regionOffline(a, State.MERGED);
     regionOffline(b, State.MERGED);
     regionOnline(hri, serverName, 1);
+
+    try {
+      if (this.shouldAssignRegionsWithFavoredNodes) {
+        processFavoredNodesForMerge(hri, a, b);
+        /*
+         * This can be removed once HBASE-16119 (Procedure v2 Merge) is implemented and AM force
+         * assigns the merged region on the same region server. FavoredNodes for the region would
+         * be passed along with OpenRegionRequest and hence the following would become redundant.
+         */
+        List<ServerName> favoredNodes = server.getFavoredNodesManager().getFavoredNodes(hri);
+        if (favoredNodes != null) {
+          Map<HRegionInfo, List<ServerName>> regionFNMap = new HashMap<>(1);
+          regionFNMap.put(hri, favoredNodes);
+          server.getServerManager().sendFavoredNodes(serverName, regionFNMap);
+        }
+      }
+    } catch (IOException e) {
+      LOG.error("Error while processing favored nodes after merge.", e);
+      return StringUtils.stringifyException(e);
+    }
 
     // User could disable the table before master knows the new region.
     if (getTableStateManager().isTableState(hri.getTable(),
@@ -2668,9 +2740,16 @@ public class AssignmentManager {
         + ", a=" + rs_a + ", b=" + rs_b;
     }
 
+    // Always bring the children back online. Even if they are not offline
+    // there's no harm in making them online again.
     regionOnline(a, serverName);
     regionOnline(b, serverName);
-    regionOffline(hri);
+
+    // Only offline the merging region if it is known to exist.
+    RegionState rs_p = regionStates.getRegionState(hri);
+    if (rs_p != null) {
+      regionOffline(hri);
+    }
 
     if (getTableStateManager().isTableState(hri.getTable(),
         TableState.State.DISABLED, TableState.State.DISABLING)) {
@@ -2866,7 +2945,7 @@ public class AssignmentManager {
    *      (d) Other scenarios should be handled similarly as for
    *        region open/close
    */
-  protected String onRegionTransition(final ServerName serverName,
+  public String onRegionTransition(final ServerName serverName,
       final RegionStateTransition transition) {
     TransitionCode code = transition.getTransitionCode();
     HRegionInfo hri = HRegionInfo.convert(transition.getRegionInfo(0));

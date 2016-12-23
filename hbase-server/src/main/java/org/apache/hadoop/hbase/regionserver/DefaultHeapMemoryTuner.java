@@ -29,7 +29,7 @@ import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HConstants;
-import org.apache.hadoop.hbase.io.util.HeapMemorySizeUtil;
+import org.apache.hadoop.hbase.io.util.MemorySizeUtil;
 import org.apache.hadoop.hbase.regionserver.HeapMemoryManager.TunerContext;
 import org.apache.hadoop.hbase.regionserver.HeapMemoryManager.TunerResult;
 import org.apache.hadoop.hbase.util.RollingStatCalculator;
@@ -109,6 +109,9 @@ class DefaultHeapMemoryTuner implements HeapMemoryTuner {
   private float globalMemStorePercentMaxRange;
   private float blockCachePercentMinRange;
   private float blockCachePercentMaxRange;
+
+  private float globalMemStoreLimitLowMarkPercent;
+
   // Store statistics about the corresponding parameters for memory tuning
   private RollingStatCalculator rollingStatsForCacheMisses;
   private RollingStatCalculator rollingStatsForFlushes;
@@ -136,6 +139,10 @@ class DefaultHeapMemoryTuner implements HeapMemoryTuner {
     }
     StepDirection newTuneDirection = getTuneDirection(context);
 
+    long blockedFlushCount = context.getBlockedFlushCount();
+    long unblockedFlushCount = context.getUnblockedFlushCount();
+    long totalOnheapFlushCount = blockedFlushCount + unblockedFlushCount;
+    boolean offheapMemstore = context.isOffheapMemstore();
     float newMemstoreSize;
     float newBlockCacheSize;
 
@@ -156,7 +163,10 @@ class DefaultHeapMemoryTuner implements HeapMemoryTuner {
         && decayingTunerStepSizeSum > 0)) {
       // Current step is opposite of past tuner actions so decrease the step size to reach steady
       // state.
-      step = step/2.00f;
+      if (!offheapMemstore && step != minimumStepSize) {
+        // we leave the step to be at minimumStepSize for offheap memstore
+        step = step / 2.00f;
+      }
     }
     if (step < minimumStepSize) {
       // If step size is too small then we do nothing.
@@ -164,12 +174,20 @@ class DefaultHeapMemoryTuner implements HeapMemoryTuner {
       step = 0.0f;
       newTuneDirection = StepDirection.NEUTRAL;
     }
-    // Increase / decrease the memstore / block cahce sizes depending on new tuner step.
-    float globalMemstoreLowerMark = HeapMemorySizeUtil.getGlobalMemStoreLowerMark(conf,
-        curMemstoreSize);
+    // There are no flushes due to onheap pressure and
+    // we have an offheap memstore and we are in need of more block_cache size.
+    if (totalOnheapFlushCount == 0 && offheapMemstore
+        && newTuneDirection == StepDirection.INCREASE_BLOCK_CACHE_SIZE) {
+      // we are sure that there are flushes only due to offheap pressure
+      // So don't do the memstore decrease equal to the step size. Instead do minimum stepSize
+      // decrease. But even if we have some flushes due to heap then it is better we tune
+      // the existing way.
+      step = minimumStepSize;
+    }
+    // Increase / decrease the memstore / block cache sizes depending on new tuner step.
     // We don't want to exert immediate pressure on memstore. So, we decrease its size gracefully;
     // we set a minimum bar in the middle of the total memstore size and the lower limit.
-    float minMemstoreSize = ((globalMemstoreLowerMark + 1) * curMemstoreSize) / 2.00f;
+    float minMemstoreSize = ((globalMemStoreLimitLowMarkPercent + 1) * curMemstoreSize) / 2.00f;
 
     switch (newTuneDirection) {
     case INCREASE_BLOCK_CACHE_SIZE:
@@ -221,7 +239,7 @@ class DefaultHeapMemoryTuner implements HeapMemoryTuner {
     long unblockedFlushCount = context.getUnblockedFlushCount();
     long evictCount = context.getEvictCount();
     long cacheMissCount = context.getCacheMissCount();
-    long totalFlushCount = blockedFlushCount+unblockedFlushCount;
+    long totalFlushCount = blockedFlushCount + unblockedFlushCount;
     float curMemstoreSize = context.getCurMemStoreSize();
     float curBlockCacheSize = context.getCurBlockCacheSize();
     StringBuilder tunerLog = new StringBuilder();
@@ -341,8 +359,8 @@ class DefaultHeapMemoryTuner implements HeapMemoryTuner {
    */
   private void addToRollingStats(TunerContext context) {
     rollingStatsForCacheMisses.insertDataValue(context.getCacheMissCount());
-    rollingStatsForFlushes.insertDataValue(context.getBlockedFlushCount() +
-        context.getUnblockedFlushCount());
+    rollingStatsForFlushes
+        .insertDataValue(context.getBlockedFlushCount() + context.getUnblockedFlushCount());
     rollingStatsForEvictions.insertDataValue(context.getEvictCount());
   }
 
@@ -365,9 +383,11 @@ class DefaultHeapMemoryTuner implements HeapMemoryTuner {
     this.blockCachePercentMaxRange = conf.getFloat(BLOCK_CACHE_SIZE_MAX_RANGE_KEY,
         conf.getFloat(HFILE_BLOCK_CACHE_SIZE_KEY, HConstants.HFILE_BLOCK_CACHE_SIZE_DEFAULT));
     this.globalMemStorePercentMinRange = conf.getFloat(MEMSTORE_SIZE_MIN_RANGE_KEY,
-        HeapMemorySizeUtil.getGlobalMemStorePercent(conf, false));
+        MemorySizeUtil.getGlobalMemStoreHeapPercent(conf, false));
     this.globalMemStorePercentMaxRange = conf.getFloat(MEMSTORE_SIZE_MAX_RANGE_KEY,
-        HeapMemorySizeUtil.getGlobalMemStorePercent(conf, false));
+        MemorySizeUtil.getGlobalMemStoreHeapPercent(conf, false));
+    this.globalMemStoreLimitLowMarkPercent = MemorySizeUtil.getGlobalMemStoreHeapLowerMark(conf,
+        true);
     // Default value of periods to ignore is number of lookup periods
     this.numPeriodsToIgnore = conf.getInt(NUM_PERIODS_TO_IGNORE, this.tunerLookupPeriods);
     this.rollingStatsForCacheMisses = new RollingStatCalculator(this.tunerLookupPeriods);

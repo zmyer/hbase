@@ -28,6 +28,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.TreeMap;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
@@ -56,6 +57,7 @@ import org.apache.hadoop.hbase.NamespaceNotFoundException;
 import org.apache.hadoop.hbase.NotServingRegionException;
 import org.apache.hadoop.hbase.ProcedureInfo;
 import org.apache.hadoop.hbase.RegionLocations;
+import org.apache.hadoop.hbase.RegionLoad;
 import org.apache.hadoop.hbase.ServerName;
 import org.apache.hadoop.hbase.TableExistsException;
 import org.apache.hadoop.hbase.TableName;
@@ -75,6 +77,7 @@ import org.apache.hadoop.hbase.quotas.QuotaFilter;
 import org.apache.hadoop.hbase.quotas.QuotaRetriever;
 import org.apache.hadoop.hbase.quotas.QuotaSettings;
 import org.apache.hadoop.hbase.regionserver.wal.FailedLogCloseException;
+import org.apache.hadoop.hbase.replication.ReplicationPeerConfig;
 import org.apache.hadoop.hbase.shaded.com.google.protobuf.ServiceException;
 import org.apache.hadoop.hbase.shaded.protobuf.ProtobufUtil;
 import org.apache.hadoop.hbase.shaded.protobuf.RequestConverter;
@@ -117,8 +120,6 @@ import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.DeleteTabl
 import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.DeleteTableResponse;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.DisableTableRequest;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.DisableTableResponse;
-import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.DispatchMergingRegionsRequest;
-import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.DispatchMergingRegionsResponse;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.EnableTableRequest;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.EnableTableResponse;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.ExecProcedureRequest;
@@ -145,6 +146,8 @@ import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.ListTableD
 import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.ListTableNamesByNamespaceRequest;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.MajorCompactionTimestampForRegionRequest;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.MajorCompactionTimestampRequest;
+import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.MergeTableRegionsRequest;
+import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.MergeTableRegionsResponse;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.ModifyColumnRequest;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.ModifyColumnResponse;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.ModifyNamespaceRequest;
@@ -165,7 +168,6 @@ import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.TruncateTa
 import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.TruncateTableResponse;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.UnassignRegionRequest;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.ProcedureProtos;
-import org.apache.hadoop.hbase.shaded.protobuf.generated.ProcedureProtos.ProcedureState;
 import org.apache.hadoop.hbase.snapshot.ClientSnapshotDescriptionUtils;
 import org.apache.hadoop.hbase.snapshot.HBaseSnapshotException;
 import org.apache.hadoop.hbase.snapshot.RestoreSnapshotException;
@@ -1512,68 +1514,80 @@ public class HBaseAdmin implements Admin {
       final byte[] nameOfRegionA,
       final byte[] nameOfRegionB,
       final boolean forcible) throws IOException {
+    byte[][] nameofRegionsToMerge = new byte[2][];
+    nameofRegionsToMerge[0] = nameOfRegionA;
+    nameofRegionsToMerge[1] = nameOfRegionB;
+    return mergeRegionsAsync(nameofRegionsToMerge, forcible);
+  }
 
-    final byte[] encodedNameOfRegionA = isEncodedRegionName(nameOfRegionA) ?
-      nameOfRegionA : HRegionInfo.encodeRegionName(nameOfRegionA).getBytes();
-    final byte[] encodedNameOfRegionB = isEncodedRegionName(nameOfRegionB) ?
-      nameOfRegionB : HRegionInfo.encodeRegionName(nameOfRegionB).getBytes();
-
-    TableName tableName;
-    Pair<HRegionInfo, ServerName> pair = getRegion(nameOfRegionA);
-
-    if (pair != null) {
-      if (pair.getFirst().getReplicaId() != HRegionInfo.DEFAULT_REPLICA_ID) {
-        throw new IllegalArgumentException ("Can't invoke merge on non-default regions directly");
-      }
-      tableName = pair.getFirst().getTable();
-    } else {
-      throw new UnknownRegionException (
-        "Can't invoke merge on unknown region " + Bytes.toStringBinary(encodedNameOfRegionA));
+  /**
+   * Merge two regions. Asynchronous operation.
+   * @param nameofRegionsToMerge encoded or full name of daughter regions
+   * @param forcible true if do a compulsory merge, otherwise we will only merge
+   *          adjacent regions
+   * @throws IOException
+   */
+  @Override
+  public Future<Void> mergeRegionsAsync(
+      final byte[][] nameofRegionsToMerge,
+      final boolean forcible) throws IOException {
+    assert(nameofRegionsToMerge.length >= 2);
+    byte[][] encodedNameofRegionsToMerge = new byte[nameofRegionsToMerge.length][];
+    for(int i = 0; i < nameofRegionsToMerge.length; i++) {
+      encodedNameofRegionsToMerge[i] = isEncodedRegionName(nameofRegionsToMerge[i]) ?
+        nameofRegionsToMerge[i] : HRegionInfo.encodeRegionName(nameofRegionsToMerge[i]).getBytes();
     }
 
-    pair = getRegion(nameOfRegionB);
-    if (pair != null) {
-      if (pair.getFirst().getReplicaId() != HRegionInfo.DEFAULT_REPLICA_ID) {
-        throw new IllegalArgumentException ("Can't invoke merge on non-default regions directly");
-      }
+    TableName tableName = null;
+    Pair<HRegionInfo, ServerName> pair;
 
-      if (!tableName.equals(pair.getFirst().getTable())) {
-        throw new IllegalArgumentException ("Cannot merge regions from two different tables " +
-          tableName + " and " + pair.getFirst().getTable());
+    for(int i = 0; i < nameofRegionsToMerge.length; i++) {
+      pair = getRegion(nameofRegionsToMerge[i]);
+
+      if (pair != null) {
+        if (pair.getFirst().getReplicaId() != HRegionInfo.DEFAULT_REPLICA_ID) {
+          throw new IllegalArgumentException ("Can't invoke merge on non-default regions directly");
+        }
+        if (tableName == null) {
+          tableName = pair.getFirst().getTable();
+        } else  if (!tableName.equals(pair.getFirst().getTable())) {
+          throw new IllegalArgumentException ("Cannot merge regions from two different tables " +
+              tableName + " and " + pair.getFirst().getTable());
+        }
+      } else {
+        throw new UnknownRegionException (
+          "Can't invoke merge on unknown region "
+          + Bytes.toStringBinary(encodedNameofRegionsToMerge[i]));
       }
-    } else {
-      throw new UnknownRegionException (
-        "Can't invoke merge on unknown region " + Bytes.toStringBinary(encodedNameOfRegionB));
     }
 
-    DispatchMergingRegionsResponse response =
-        executeCallable(new MasterCallable<DispatchMergingRegionsResponse>(getConnection(),
+    MergeTableRegionsResponse response =
+        executeCallable(new MasterCallable<MergeTableRegionsResponse>(getConnection(),
             getRpcControllerFactory()) {
       @Override
-      protected DispatchMergingRegionsResponse rpcCall() throws Exception {
-        DispatchMergingRegionsRequest request = RequestConverter
-            .buildDispatchMergingRegionsRequest(
-                encodedNameOfRegionA,
-                encodedNameOfRegionB,
+      protected MergeTableRegionsResponse rpcCall() throws Exception {
+        MergeTableRegionsRequest request = RequestConverter
+            .buildMergeTableRegionsRequest(
+                encodedNameofRegionsToMerge,
                 forcible,
                 ng.getNonceGroup(),
                 ng.newNonce());
-        return master.dispatchMergingRegions(getRpcController(), request);
+        return master.mergeTableRegions(getRpcController(), request);
       }
     });
-    return new DispatchMergingRegionsFuture(this, tableName, response);
+    return new MergeTableRegionsFuture(this, tableName, response);
   }
 
-  private static class DispatchMergingRegionsFuture extends TableFuture<Void> {
-    public DispatchMergingRegionsFuture(
+  private static class MergeTableRegionsFuture extends TableFuture<Void> {
+    public MergeTableRegionsFuture(
         final HBaseAdmin admin,
         final TableName tableName,
-        final DispatchMergingRegionsResponse response) {
+        final MergeTableRegionsResponse response) {
       super(admin, tableName,
           (response != null && response.hasProcId()) ? response.getProcId() : null);
     }
 
-    public DispatchMergingRegionsFuture(
+    public MergeTableRegionsFuture(
         final HBaseAdmin admin,
         final TableName tableName,
         final Long procId) {
@@ -1878,6 +1892,24 @@ public class HBaseAdmin implements Admin {
             getClusterStatus());
       }
     });
+  }
+
+  @Override
+  public Map<byte[], RegionLoad> getRegionLoad(final ServerName sn) throws IOException {
+    return getRegionLoad(sn, null);
+  }
+
+  @Override
+  public Map<byte[], RegionLoad> getRegionLoad(final ServerName sn, final TableName tableName)
+      throws IOException {
+    AdminService.BlockingInterface admin = this.connection.getAdmin(sn);
+    HBaseRpcController controller = rpcControllerFactory.newController();
+    List<RegionLoad> regionLoads = ProtobufUtil.getRegionLoad(controller, admin, tableName);
+    Map<byte[], RegionLoad> resultMap = new TreeMap<byte[], RegionLoad>(Bytes.BYTES_COMPARATOR);
+    for (RegionLoad regionLoad : regionLoads) {
+      resultMap.put(regionLoad.getName(), regionLoad);
+    }
+    return resultMap;
   }
 
   @Override
@@ -2339,14 +2371,15 @@ public class HBaseAdmin implements Admin {
   public void snapshot(final String snapshotName, final TableName tableName,
       SnapshotType type)
       throws IOException, SnapshotCreationException, IllegalArgumentException {
-    snapshot(new SnapshotDescription(snapshotName, tableName.getNameAsString(), type));
+    snapshot(new SnapshotDescription(snapshotName, tableName, type));
   }
 
   @Override
   public void snapshot(SnapshotDescription snapshotDesc)
       throws IOException, SnapshotCreationException, IllegalArgumentException {
     // actually take the snapshot
-    HBaseProtos.SnapshotDescription snapshot = createHBaseProtosSnapshotDesc(snapshotDesc);
+    HBaseProtos.SnapshotDescription snapshot =
+      ProtobufUtil.createHBaseProtosSnapshotDesc(snapshotDesc);
     SnapshotResponse response = asyncSnapshot(snapshot);
     final IsSnapshotDoneRequest request =
         IsSnapshotDoneRequest.newBuilder().setSnapshot(snapshot).build();
@@ -2388,31 +2421,7 @@ public class HBaseAdmin implements Admin {
   @Override
   public void takeSnapshotAsync(SnapshotDescription snapshotDesc) throws IOException,
       SnapshotCreationException {
-    HBaseProtos.SnapshotDescription snapshot = createHBaseProtosSnapshotDesc(snapshotDesc);
-    asyncSnapshot(snapshot);
-  }
-
-  private HBaseProtos.SnapshotDescription
-      createHBaseProtosSnapshotDesc(SnapshotDescription snapshotDesc) {
-    HBaseProtos.SnapshotDescription.Builder builder = HBaseProtos.SnapshotDescription.newBuilder();
-    if (snapshotDesc.getTable() != null) {
-      builder.setTable(snapshotDesc.getTable());
-    }
-    if (snapshotDesc.getName() != null) {
-      builder.setName(snapshotDesc.getName());
-    }
-    if (snapshotDesc.getOwner() != null) {
-      builder.setOwner(snapshotDesc.getOwner());
-    }
-    if (snapshotDesc.getCreationTime() != -1) {
-      builder.setCreationTime(snapshotDesc.getCreationTime());
-    }
-    if (snapshotDesc.getVersion() != -1) {
-      builder.setVersion(snapshotDesc.getVersion());
-    }
-    builder.setType(ProtobufUtil.createProtosSnapShotDescType(snapshotDesc.getType()));
-    HBaseProtos.SnapshotDescription snapshot = builder.build();
-    return snapshot;
+    asyncSnapshot(ProtobufUtil.createHBaseProtosSnapshotDesc(snapshotDesc));
   }
 
   private SnapshotResponse asyncSnapshot(HBaseProtos.SnapshotDescription snapshot)
@@ -2433,7 +2442,8 @@ public class HBaseAdmin implements Admin {
   @Override
   public boolean isSnapshotFinished(final SnapshotDescription snapshotDesc)
       throws IOException, HBaseSnapshotException, UnknownSnapshotException {
-    final HBaseProtos.SnapshotDescription snapshot = createHBaseProtosSnapshotDesc(snapshotDesc);
+    final HBaseProtos.SnapshotDescription snapshot =
+        ProtobufUtil.createHBaseProtosSnapshotDesc(snapshotDesc);
     return executeCallable(new MasterCallable<IsSnapshotDoneResponse>(getConnection(),
         getRpcControllerFactory()) {
       @Override
@@ -2476,7 +2486,7 @@ public class HBaseAdmin implements Admin {
     TableName tableName = null;
     for (SnapshotDescription snapshotInfo: listSnapshots()) {
       if (snapshotInfo.getName().equals(snapshotName)) {
-        tableName = TableName.valueOf(snapshotInfo.getTable());
+        tableName = snapshotInfo.getTableName();
         break;
       }
     }
@@ -2730,8 +2740,7 @@ public class HBaseAdmin implements Admin {
       }
     });
 
-    return new RestoreSnapshotFuture(
-      this, snapshot, TableName.valueOf(snapshot.getTable()), response);
+    return new RestoreSnapshotFuture(this, snapshot, tableName, response);
   }
 
   private static class RestoreSnapshotFuture extends TableFuture<Void> {
@@ -2773,9 +2782,7 @@ public class HBaseAdmin implements Admin {
             .getSnapshotsList();
         List<SnapshotDescription> result = new ArrayList<SnapshotDescription>(snapshotsList.size());
         for (HBaseProtos.SnapshotDescription snapshot : snapshotsList) {
-          result.add(new SnapshotDescription(snapshot.getName(), snapshot.getTable(),
-              ProtobufUtil.createSnapshotType(snapshot.getType()), snapshot.getOwner(),
-              snapshot.getCreationTime(), snapshot.getVersion()));
+          result.add(ProtobufUtil.createSnapshotDesc(snapshot));
         }
         return result;
       }
@@ -2815,7 +2822,7 @@ public class HBaseAdmin implements Admin {
 
     List<TableName> listOfTableNames = Arrays.asList(tableNames);
     for (SnapshotDescription snapshot : snapshots) {
-      if (listOfTableNames.contains(TableName.valueOf(snapshot.getTable()))) {
+      if (listOfTableNames.contains(snapshot.getTableName())) {
         tableSnapshots.add(snapshot);
       }
     }
@@ -2858,7 +2865,7 @@ public class HBaseAdmin implements Admin {
         internalDeleteSnapshot(snapshot);
       } catch (IOException ex) {
         LOG.info(
-          "Failed to delete snapshot " + snapshot.getName() + " for table " + snapshot.getTable(),
+          "Failed to delete snapshot " + snapshot.getName() + " for table " + snapshot.getTableNameAsString(),
           ex);
       }
     }
@@ -2869,7 +2876,7 @@ public class HBaseAdmin implements Admin {
       @Override
       protected Void rpcCall() throws Exception {
         this.master.deleteSnapshot(getRpcController(), DeleteSnapshotRequest.newBuilder()
-          .setSnapshot(createHBaseProtosSnapshotDesc(snapshot)).build());
+          .setSnapshot(ProtobufUtil.createHBaseProtosSnapshotDesc(snapshot)).build());
         return null;
       }
     });
@@ -3737,5 +3744,54 @@ public class HBaseAdmin implements Admin {
 
   private RpcControllerFactory getRpcControllerFactory() {
     return this.rpcControllerFactory;
+  }
+
+  @Override
+  public void addReplicationPeer(String peerId, ReplicationPeerConfig peerConfig)
+      throws IOException {
+    executeCallable(new MasterCallable<Void>(getConnection(), getRpcControllerFactory()) {
+      @Override
+      protected Void rpcCall() throws Exception {
+        master.addReplicationPeer(getRpcController(),
+          RequestConverter.buildAddReplicationPeerRequest(peerId, peerConfig));
+        return null;
+      }
+    });
+  }
+
+  @Override
+  public void removeReplicationPeer(String peerId) throws IOException {
+    executeCallable(new MasterCallable<Void>(getConnection(), getRpcControllerFactory()) {
+      @Override
+      protected Void rpcCall() throws Exception {
+        master.removeReplicationPeer(getRpcController(),
+          RequestConverter.buildRemoveReplicationPeerRequest(peerId));
+        return null;
+      }
+    });
+  }
+
+  @Override
+  public void enableReplicationPeer(final String peerId) throws IOException {
+    executeCallable(new MasterCallable<Void>(getConnection(), getRpcControllerFactory()) {
+      @Override
+      protected Void rpcCall() throws Exception {
+        master.enableReplicationPeer(getRpcController(),
+          RequestConverter.buildEnableReplicationPeerRequest(peerId));
+        return null;
+      }
+    });
+  }
+
+  @Override
+  public void disableReplicationPeer(final String peerId) throws IOException {
+    executeCallable(new MasterCallable<Void>(getConnection(), getRpcControllerFactory()) {
+      @Override
+      protected Void rpcCall() throws Exception {
+        master.disableReplicationPeer(getRpcController(),
+          RequestConverter.buildDisableReplicationPeerRequest(peerId));
+        return null;
+      }
+    });
   }
 }

@@ -30,7 +30,7 @@ import org.apache.hadoop.hbase.classification.InterfaceStability;
  */
 @InterfaceAudience.Public
 @InterfaceStability.Evolving
-public class BufferedMutatorParams {
+public class BufferedMutatorParams implements Cloneable {
 
   static final int UNSET = -1;
 
@@ -38,6 +38,8 @@ public class BufferedMutatorParams {
   private long writeBufferSize = UNSET;
   private int maxKeyValueSize = UNSET;
   private ExecutorService pool = null;
+  private String implementationClassName = null;
+
   private BufferedMutator.ExceptionListener listener = new BufferedMutator.ExceptionListener() {
     @Override
     public void onException(RetriesExhaustedWithDetailsException exception,
@@ -96,6 +98,23 @@ public class BufferedMutatorParams {
     return this;
   }
 
+  /**
+   * @return Name of the class we will use when we construct a
+   * {@link BufferedMutator} instance or null if default implementation.
+   */
+  public String getImplementationClassName() {
+    return this.implementationClassName;
+  }
+
+  /**
+   * Specify a BufferedMutator implementation other than the default.
+   * @param implementationClassName Name of the BufferedMutator implementation class
+   */
+  public BufferedMutatorParams implementationClassName(String implementationClassName) {
+    this.implementationClassName = implementationClassName;
+    return this;
+  }
+
   public BufferedMutator.ExceptionListener getListener() {
     return listener;
   }
@@ -106,5 +125,22 @@ public class BufferedMutatorParams {
   public BufferedMutatorParams listener(BufferedMutator.ExceptionListener listener) {
     this.listener = listener;
     return this;
+  }
+
+  /*
+   * (non-Javadoc)
+   *
+   * @see java.lang.Object#clone()
+   */
+  @edu.umd.cs.findbugs.annotations.SuppressWarnings(value="CN_IDIOM_NO_SUPER_CALL",
+    justification="The clone below is complete")
+  public BufferedMutatorParams clone() {
+    BufferedMutatorParams clone = new BufferedMutatorParams(this.tableName);
+    clone.writeBufferSize = this.writeBufferSize;
+    clone.maxKeyValueSize = maxKeyValueSize;
+    clone.pool = this.pool;
+    clone.listener = this.listener;
+    clone.implementationClassName = this.implementationClassName;
+    return clone;
   }
 }

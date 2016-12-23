@@ -33,12 +33,14 @@ import org.apache.hadoop.hbase.Coprocessor;
 import org.apache.hadoop.hbase.HColumnDescriptor;
 import org.apache.hadoop.hbase.HRegionInfo;
 import org.apache.hadoop.hbase.HTableDescriptor;
+import org.apache.hadoop.hbase.MetaMutationAnnotation;
 import org.apache.hadoop.hbase.NamespaceDescriptor;
 import org.apache.hadoop.hbase.ProcedureInfo;
 import org.apache.hadoop.hbase.ServerName;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
 import org.apache.hadoop.hbase.client.MasterSwitchType;
+import org.apache.hadoop.hbase.client.Mutation;
 import org.apache.hadoop.hbase.coprocessor.CoprocessorHost;
 import org.apache.hadoop.hbase.coprocessor.CoprocessorService;
 import org.apache.hadoop.hbase.coprocessor.MasterCoprocessorEnvironment;
@@ -47,6 +49,7 @@ import org.apache.hadoop.hbase.coprocessor.ObserverContext;
 import org.apache.hadoop.hbase.ipc.RpcServer;
 import org.apache.hadoop.hbase.master.procedure.MasterProcedureEnv;
 import org.apache.hadoop.hbase.procedure2.ProcedureExecutor;
+import org.apache.hadoop.hbase.replication.ReplicationPeerConfig;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.QuotaProtos.Quotas;
 import org.apache.hadoop.hbase.security.User;
@@ -791,6 +794,28 @@ public class MasterCoprocessorHost
     });
   }
 
+  public void preMergeRegions(final HRegionInfo[] regionsToMerge)
+      throws IOException {
+    execOperation(coprocessors.isEmpty() ? null : new CoprocessorOperation() {
+      @Override
+      public void call(MasterObserver oserver, ObserverContext<MasterCoprocessorEnvironment> ctx)
+          throws IOException {
+        oserver.preMergeRegions(ctx, regionsToMerge);
+      }
+    });
+  }
+
+  public void postMergeRegions(final HRegionInfo[] regionsToMerge)
+      throws IOException {
+    execOperation(coprocessors.isEmpty() ? null : new CoprocessorOperation() {
+      @Override
+      public void call(MasterObserver oserver, ObserverContext<MasterCoprocessorEnvironment> ctx)
+          throws IOException {
+        oserver.postMergeRegions(ctx, regionsToMerge);
+      }
+    });
+  }
+
   public boolean preBalance() throws IOException {
     return execOperation(coprocessors.isEmpty() ? null : new CoprocessorOperation() {
       @Override
@@ -829,6 +854,208 @@ public class MasterCoprocessorHost
       public void call(MasterObserver oserver, ObserverContext<MasterCoprocessorEnvironment> ctx)
           throws IOException {
         oserver.postSetSplitOrMergeEnabled(ctx, newValue, switchType);
+      }
+    });
+  }
+
+  /**
+   * Invoked just before calling the split region procedure
+   * @param tableName the table where the region belongs to
+   * @param splitRow the split point
+   * @throws IOException
+   */
+  public void preSplitRegion(
+      final TableName tableName,
+      final byte[] splitRow) throws IOException {
+    execOperation(coprocessors.isEmpty() ? null : new CoprocessorOperation() {
+      @Override
+      public void call(MasterObserver oserver, ObserverContext<MasterCoprocessorEnvironment> ctx)
+          throws IOException {
+        oserver.preSplitRegion(ctx, tableName, splitRow);
+      }
+    });
+  }
+
+  /**
+   * Invoked just before a split
+   * @param tableName the table where the region belongs to
+   * @param splitRow the split point
+   * @param user the user
+   * @throws IOException
+   */
+  public void preSplitRegionAction(
+      final TableName tableName,
+      final byte[] splitRow,
+      final User user) throws IOException {
+    execOperation(coprocessors.isEmpty() ? null : new CoprocessorOperation(user) {
+      @Override
+      public void call(MasterObserver oserver, ObserverContext<MasterCoprocessorEnvironment> ctx)
+          throws IOException {
+        oserver.preSplitRegionAction(ctx, tableName, splitRow);
+      }
+    });
+  }
+
+  /**
+   * Invoked just after a split
+   * @param regionInfoA the new left-hand daughter region
+   * @param regionInfoB the new right-hand daughter region
+   * @param user the user
+   * @throws IOException
+   */
+  public void postCompletedSplitRegionAction(
+      final HRegionInfo regionInfoA,
+      final HRegionInfo regionInfoB,
+      final User user) throws IOException {
+    execOperation(coprocessors.isEmpty() ? null : new CoprocessorOperation(user) {
+      @Override
+      public void call(MasterObserver oserver, ObserverContext<MasterCoprocessorEnvironment> ctx)
+          throws IOException {
+        oserver.postCompletedSplitRegionAction(ctx, regionInfoA, regionInfoB);
+      }
+    });
+  }
+
+  /**
+   * This will be called before PONR step as part of split table region procedure.
+   * @param splitKey
+   * @param metaEntries
+   * @param user the user
+   * @throws IOException
+   */
+  public boolean preSplitBeforePONRAction(
+      final byte[] splitKey,
+      final List<Mutation> metaEntries,
+      final User user) throws IOException {
+    return execOperation(coprocessors.isEmpty() ? null : new CoprocessorOperation(user) {
+      @Override
+      public void call(MasterObserver oserver, ObserverContext<MasterCoprocessorEnvironment> ctx)
+          throws IOException {
+        oserver.preSplitRegionBeforePONRAction(ctx, splitKey, metaEntries);
+      }
+    });
+  }
+
+  /**
+   * This will be called after PONR step as part of split table region procedure.
+   * @param user the user
+   * @throws IOException
+   */
+  public void preSplitAfterPONRAction(final User user) throws IOException {
+    execOperation(coprocessors.isEmpty() ? null : new CoprocessorOperation(user) {
+      @Override
+      public void call(MasterObserver oserver, ObserverContext<MasterCoprocessorEnvironment> ctx)
+          throws IOException {
+        oserver.preSplitRegionAfterPONRAction(ctx);
+      }
+    });
+  }
+
+  /**
+   * Invoked just after the rollback of a failed split
+   * @param user the user
+   * @throws IOException
+   */
+  public void postRollBackSplitRegionAction(final User user) throws IOException {
+    execOperation(coprocessors.isEmpty() ? null : new CoprocessorOperation(user) {
+      @Override
+      public void call(MasterObserver oserver, ObserverContext<MasterCoprocessorEnvironment> ctx)
+          throws IOException {
+        oserver.postRollBackSplitRegionAction(ctx);
+      }
+    });
+  }
+
+  /**
+   * Invoked just before a merge
+   * @param regionsToMerge the regions to merge
+   * @param user the user
+   * @throws IOException
+   */
+  public boolean preMergeRegionsAction(
+      final HRegionInfo[] regionsToMerge, final User user) throws IOException {
+    return execOperation(coprocessors.isEmpty() ? null : new CoprocessorOperation(user) {
+      @Override
+      public void call(MasterObserver oserver,
+          ObserverContext<MasterCoprocessorEnvironment> ctx) throws IOException {
+        oserver.preMergeRegionsAction(ctx, regionsToMerge);
+      }
+    });
+  }
+
+  /**
+   * Invoked after completing merge regions operation
+   * @param regionsToMerge the regions to merge
+   * @param mergedRegion the new merged region
+   * @param user the user
+   * @throws IOException
+   */
+  public void postCompletedMergeRegionsAction(
+      final HRegionInfo[] regionsToMerge,
+      final HRegionInfo mergedRegion,
+      final User user) throws IOException {
+    execOperation(coprocessors.isEmpty() ? null : new CoprocessorOperation(user) {
+      @Override
+      public void call(MasterObserver oserver,
+          ObserverContext<MasterCoprocessorEnvironment> ctx) throws IOException {
+        oserver.postCompletedMergeRegionsAction(ctx, regionsToMerge, mergedRegion);
+      }
+    });
+  }
+
+  /**
+   * Invoked before merge regions operation writes the new region to hbase:meta
+   * @param regionsToMerge the regions to merge
+   * @param metaEntries the meta entry
+   * @param user the user
+   * @throws IOException
+   */
+  public boolean preMergeRegionsCommit(
+      final HRegionInfo[] regionsToMerge,
+      final @MetaMutationAnnotation List<Mutation> metaEntries,
+      final User user) throws IOException {
+    return execOperation(coprocessors.isEmpty() ? null : new CoprocessorOperation(user) {
+      @Override
+      public void call(MasterObserver oserver,
+          ObserverContext<MasterCoprocessorEnvironment> ctx) throws IOException {
+        oserver.preMergeRegionsCommitAction(ctx, regionsToMerge, metaEntries);
+      }
+    });
+  }
+
+  /**
+   * Invoked after merge regions operation writes the new region to hbase:meta
+   * @param regionsToMerge the regions to merge
+   * @param mergedRegion the new merged region
+   * @param user the user
+   * @throws IOException
+   */
+  public void postMergeRegionsCommit(
+      final HRegionInfo[] regionsToMerge,
+      final HRegionInfo mergedRegion,
+      final User user) throws IOException {
+    execOperation(coprocessors.isEmpty() ? null : new CoprocessorOperation(user) {
+      @Override
+      public void call(MasterObserver oserver,
+          ObserverContext<MasterCoprocessorEnvironment> ctx) throws IOException {
+        oserver.postMergeRegionsCommitAction(ctx, regionsToMerge, mergedRegion);
+      }
+    });
+  }
+
+  /**
+   * Invoked after rollback merge regions operation
+   * @param regionsToMerge the regions to merge
+   * @param user the user
+   * @throws IOException
+   */
+  public void postRollBackMergeRegionsAction(
+      final HRegionInfo[] regionsToMerge, final User user) throws IOException {
+    execOperation(coprocessors.isEmpty() ? null : new CoprocessorOperation(user) {
+      @Override
+      public void call(MasterObserver oserver,
+          ObserverContext<MasterCoprocessorEnvironment> ctx) throws IOException {
+        oserver.postRollBackMergeRegionsAction(ctx, regionsToMerge);
       }
     });
   }
@@ -1419,4 +1646,85 @@ public class MasterCoprocessorHost
     });
   }
 
+  public void preAddReplicationPeer(final String peerId, final ReplicationPeerConfig peerConfig)
+      throws IOException {
+    execOperation(coprocessors.isEmpty() ? null : new CoprocessorOperation() {
+      @Override
+      public void call(MasterObserver observer, ObserverContext<MasterCoprocessorEnvironment> ctx)
+          throws IOException {
+        observer.preAddReplicationPeer(ctx, peerId, peerConfig);
+      }
+    });
+  }
+
+  public void postAddReplicationPeer(final String peerId, final ReplicationPeerConfig peerConfig)
+      throws IOException {
+    execOperation(coprocessors.isEmpty() ? null : new CoprocessorOperation() {
+      @Override
+      public void call(MasterObserver observer, ObserverContext<MasterCoprocessorEnvironment> ctx)
+          throws IOException {
+        observer.postAddReplicationPeer(ctx, peerId, peerConfig);
+      }
+    });
+  }
+
+  public void preRemoveReplicationPeer(final String peerId) throws IOException {
+    execOperation(coprocessors.isEmpty() ? null : new CoprocessorOperation() {
+      @Override
+      public void call(MasterObserver observer, ObserverContext<MasterCoprocessorEnvironment> ctx)
+          throws IOException {
+        observer.preRemoveReplicationPeer(ctx, peerId);
+      }
+    });
+  }
+
+  public void postRemoveReplicationPeer(final String peerId) throws IOException {
+    execOperation(coprocessors.isEmpty() ? null : new CoprocessorOperation() {
+      @Override
+      public void call(MasterObserver observer, ObserverContext<MasterCoprocessorEnvironment> ctx)
+          throws IOException {
+        observer.postRemoveReplicationPeer(ctx, peerId);
+      }
+    });
+  }
+
+  public void preEnableReplicationPeer(final String peerId) throws IOException {
+    execOperation(coprocessors.isEmpty() ? null : new CoprocessorOperation() {
+      @Override
+      public void call(MasterObserver observer, ObserverContext<MasterCoprocessorEnvironment> ctx)
+          throws IOException {
+        observer.preEnableReplicationPeer(ctx, peerId);
+      }
+    });
+  }
+
+  public void postEnableReplicationPeer(final String peerId) throws IOException {
+    execOperation(coprocessors.isEmpty() ? null : new CoprocessorOperation() {
+      @Override
+      public void call(MasterObserver observer, ObserverContext<MasterCoprocessorEnvironment> ctx)
+          throws IOException {
+        observer.postEnableReplicationPeer(ctx, peerId);
+      }
+    });
+  }
+
+  public void preDisableReplicationPeer(final String peerId) throws IOException {
+    execOperation(coprocessors.isEmpty() ? null : new CoprocessorOperation() {
+      @Override
+      public void call(MasterObserver observer, ObserverContext<MasterCoprocessorEnvironment> ctx)
+          throws IOException {
+        observer.preDisableReplicationPeer(ctx, peerId);
+      }
+    });
+  }
+
+  public void postDisableReplicationPeer(final String peerId) throws IOException {
+    execOperation(coprocessors.isEmpty() ? null : new CoprocessorOperation() {
+      @Override
+      public void call(MasterObserver observer, ObserverContext<MasterCoprocessorEnvironment> ctx)
+          throws IOException {
+        observer.postDisableReplicationPeer(ctx, peerId);
+      }
+    });
+  }
 }

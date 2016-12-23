@@ -80,6 +80,7 @@ import org.apache.hadoop.hbase.io.encoding.DataBlockEncoding;
 import org.apache.hadoop.hbase.io.hfile.RandomDistribution;
 import org.apache.hadoop.hbase.mapreduce.TableMapReduceUtil;
 import org.apache.hadoop.hbase.regionserver.BloomType;
+import org.apache.hadoop.hbase.regionserver.CompactingMemStore;
 import org.apache.hadoop.hbase.trace.HBaseHTraceConfiguration;
 import org.apache.hadoop.hbase.trace.SpanReceiverHost;
 import org.apache.hadoop.hbase.util.*;
@@ -371,12 +372,11 @@ public class PerformanceEvaluation extends Configured implements Tool {
     family.setDataBlockEncoding(opts.blockEncoding);
     family.setCompressionType(opts.compression);
     family.setBloomFilterType(opts.bloomType);
+    family.setBlocksize(opts.blockSize);
     if (opts.inMemoryCF) {
       family.setInMemory(true);
     }
-    if(opts.inMemoryCompaction) {
-      family.setInMemoryCompaction(true);
-    }
+    family.setInMemoryCompaction(opts.inMemoryCompaction);
     desc.addFamily(family);
     if (opts.replicas != DEFAULT_OPTS.replicas) {
       desc.setRegionReplication(opts.replicas);
@@ -509,10 +509,8 @@ public class PerformanceEvaluation extends Configured implements Tool {
   }
 
   /**
-   * Per client, how many tasks will we run?  We divide number of rows by this number and have the
-   * client do the resulting count in a map task.
+   * Each client has one mapper to do the work,  and client do the resulting count in a map task.
    */
-  static int TASKS_PER_CLIENT = 10;
 
   static String JOB_INPUT_FILENAME = "input.txt";
 
@@ -542,17 +540,15 @@ public class PerformanceEvaluation extends Configured implements Tool {
     Hash h = MurmurHash.getInstance();
     int perClientRows = (opts.totalRows / opts.numClientThreads);
     try {
-      for (int i = 0; i < TASKS_PER_CLIENT; i++) {
-        for (int j = 0; j < opts.numClientThreads; j++) {
-          TestOptions next = new TestOptions(opts);
-          next.startRow = (j * perClientRows) + (i * (perClientRows/10));
-          next.perClientRunRows = perClientRows / 10;
-          String s = MAPPER.writeValueAsString(next);
-          LOG.info("Client=" + j + ", maptask=" + i + ", input=" + s);
-          byte[] b = Bytes.toBytes(s);
-          int hash = h.hash(new ByteArrayHashKey(b, 0, b.length), -1);
-          m.put(hash, s);
-        }
+      for (int j = 0; j < opts.numClientThreads; j++) {
+        TestOptions next = new TestOptions(opts);
+        next.startRow = j * perClientRows;
+        next.perClientRunRows = perClientRows;
+        String s = MAPPER.writeValueAsString(next);
+        LOG.info("Client=" + j + ", input=" + s);
+        byte[] b = Bytes.toBytes(s);
+        int hash = h.hash(new ByteArrayHashKey(b, 0, b.length), -1);
+        m.put(hash, s);
       }
       for (Map.Entry<Integer, String> e: m.entrySet()) {
         out.println(e.getValue());
@@ -625,6 +621,7 @@ public class PerformanceEvaluation extends Configured implements Tool {
     String splitPolicy = null;
     Compression.Algorithm compression = Compression.Algorithm.NONE;
     BloomType bloomType = BloomType.ROW;
+    int blockSize = HConstants.DEFAULT_BLOCKSIZE;
     DataBlockEncoding blockEncoding = DataBlockEncoding.NONE;
     boolean valueRandom = false;
     boolean valueZipf = false;
@@ -634,7 +631,9 @@ public class PerformanceEvaluation extends Configured implements Tool {
     int columns = 1;
     int caching = 30;
     boolean addColumns = true;
-    boolean inMemoryCompaction = false;
+    HColumnDescriptor.MemoryCompaction inMemoryCompaction =
+        HColumnDescriptor.MemoryCompaction.valueOf(
+            CompactingMemStore.COMPACTING_MEMSTORE_TYPE_DEFAULT);
 
     public TestOptions() {}
 
@@ -670,6 +669,7 @@ public class PerformanceEvaluation extends Configured implements Tool {
       this.blockEncoding = that.blockEncoding;
       this.filterAll = that.filterAll;
       this.bloomType = that.bloomType;
+      this.blockSize = that.blockSize;
       this.valueRandom = that.valueRandom;
       this.valueZipf = that.valueZipf;
       this.valueSize = that.valueSize;
@@ -834,6 +834,10 @@ public class PerformanceEvaluation extends Configured implements Tool {
       this.bloomType = bloomType;
     }
 
+    public void setBlockSize(int blockSize) {
+      this.blockSize = blockSize;
+    }
+
     public void setBlockEncoding(DataBlockEncoding blockEncoding) {
       this.blockEncoding = blockEncoding;
     }
@@ -950,6 +954,10 @@ public class PerformanceEvaluation extends Configured implements Tool {
       return bloomType;
     }
 
+    public int getBlockSize() {
+      return blockSize;
+    }
+
     public boolean isOneCon() {
       return oneCon;
     }
@@ -970,11 +978,11 @@ public class PerformanceEvaluation extends Configured implements Tool {
       this.addColumns = addColumns;
     }
 
-    public void setInMemoryCompaction(boolean inMemoryCompaction) {
+    public void setInMemoryCompaction(HColumnDescriptor.MemoryCompaction inMemoryCompaction) {
       this.inMemoryCompaction = inMemoryCompaction;
     }
 
-    public boolean getInMemoryCompaction() {
+    public HColumnDescriptor.MemoryCompaction getInMemoryCompaction() {
       return this.inMemoryCompaction;
     }
   }
@@ -1881,8 +1889,9 @@ public class PerformanceEvaluation extends Configured implements Tool {
     System.err.println(" inmemory        Tries to keep the HFiles of the CF " +
       "inmemory as far as possible. Not guaranteed that reads are always served " +
       "from memory.  Default: false");
-    System.err.println(" bloomFilter      Bloom filter type, one of "
+    System.err.println(" bloomFilter     Bloom filter type, one of "
         + Arrays.toString(BloomType.values()));
+    System.err.println(" blockSize       Blocksize to use when writing out hfiles. ");
     System.err.println(" inmemoryCompaction  Makes the column family to do inmemory flushes/compactions. "
         + "Uses the CompactingMemstore");
     System.err.println(" addColumns      Adds columns to scans/gets explicitly. Default: true");
@@ -2084,6 +2093,11 @@ public class PerformanceEvaluation extends Configured implements Tool {
         continue;
       }
 
+      final String blockSize = "--blockSize=";
+      if(cmd.startsWith(blockSize) ) {
+        opts.blockSize = Integer.parseInt(cmd.substring(blockSize.length()));
+      }
+
       final String valueSize = "--valueSize=";
       if (cmd.startsWith(valueSize)) {
         opts.valueSize = Integer.parseInt(cmd.substring(valueSize.length()));
@@ -2122,7 +2136,8 @@ public class PerformanceEvaluation extends Configured implements Tool {
 
       final String inMemoryCompaction = "--inmemoryCompaction=";
       if (cmd.startsWith(inMemoryCompaction)) {
-        opts.inMemoryCompaction = Boolean.parseBoolean(cmd.substring(inMemoryCompaction.length()));
+        opts.inMemoryCompaction = opts.inMemoryCompaction.valueOf(cmd.substring
+            (inMemoryCompaction.length()));
         continue;
       }
 

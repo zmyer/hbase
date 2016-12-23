@@ -32,6 +32,7 @@ import "ClusterStatus.proto";
 import "ErrorHandling.proto";
 import "Procedure.proto";
 import "Quota.proto";
+import "Replication.proto";
 
 /* Column-level protobufs */
 
@@ -90,6 +91,20 @@ message DispatchMergingRegionsRequest {
 }
 
 message DispatchMergingRegionsResponse {
+  optional uint64 proc_id = 1;
+}
+
+/**
+ * Merging the specified regions in a table.
+ */
+message MergeTableRegionsRequest {
+  repeated RegionSpecifier region = 1;
+  optional bool forcible = 3 [default = false];
+  optional uint64 nonce_group = 4 [default = 0];
+  optional uint64 nonce = 5 [default = 0];
+}
+
+message MergeTableRegionsResponse {
   optional uint64 proc_id = 1;
 }
 
@@ -593,6 +608,10 @@ service MasterService {
   rpc DispatchMergingRegions(DispatchMergingRegionsRequest)
     returns(DispatchMergingRegionsResponse);
 
+ /** Master merge the regions */
+  rpc MergeTableRegions(MergeTableRegionsRequest)
+    returns(MergeTableRegionsResponse);
+
   /** Assign a region to a server chosen at random. */
   rpc AssignRegion(AssignRegionRequest)
     returns(AssignRegionResponse);
@@ -828,4 +847,20 @@ service MasterService {
   /** returns a list of procedures */
   rpc ListProcedures(ListProceduresRequest)
     returns(ListProceduresResponse);
+
+  /** Add a replication peer */
+  rpc AddReplicationPeer(AddReplicationPeerRequest)
+    returns(AddReplicationPeerResponse);
+
+  /** Remove a replication peer */
+  rpc RemoveReplicationPeer(RemoveReplicationPeerRequest)
+    returns(RemoveReplicationPeerResponse);
+
+  /** Enable a replication peer */
+  rpc EnableReplicationPeer(EnableReplicationPeerRequest)
+    returns(EnableReplicationPeerResponse);
+
+  /** Disable a replication peer */
+  rpc DisableReplicationPeer(DisableReplicationPeerRequest)
+    returns(DisableReplicationPeerResponse);
 }

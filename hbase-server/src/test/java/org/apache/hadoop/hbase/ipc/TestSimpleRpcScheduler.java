@@ -63,7 +63,6 @@ import org.apache.hadoop.hbase.util.EnvironmentEdge;
 import org.apache.hadoop.hbase.util.EnvironmentEdgeManager;
 import org.apache.hadoop.hbase.util.Threads;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -100,6 +99,7 @@ public class TestSimpleRpcScheduler {/*
 
   @Test
   public void testBasic() throws IOException, InterruptedException {
+
     PriorityFunction qosFunction = mock(PriorityFunction.class);
     RpcScheduler scheduler = new SimpleRpcScheduler(
         conf, 10, 0, 0, qosFunction, 0);
@@ -114,6 +114,7 @@ public class TestSimpleRpcScheduler {/*
 
   @Test
   public void testHandlerIsolation() throws IOException, InterruptedException {
+
     CallRunner generalTask = createMockTask();
     CallRunner priorityTask = createMockTask();
     CallRunner replicationTask = createMockTask();
@@ -168,19 +169,20 @@ public class TestSimpleRpcScheduler {/*
   private CallRunner createMockTask() {
     Call call = mock(Call.class);
     CallRunner task = mock(CallRunner.class);
-    when(task.getCall()).thenReturn(call);
+    when(task.getRpcCall()).thenReturn(call);
     return task;
   }
 
   @Test
   public void testRpcScheduler() throws Exception {
-    testRpcScheduler(SimpleRpcScheduler.CALL_QUEUE_TYPE_DEADLINE_CONF_VALUE);
-    testRpcScheduler(SimpleRpcScheduler.CALL_QUEUE_TYPE_FIFO_CONF_VALUE);
+
+    testRpcScheduler(RpcExecutor.CALL_QUEUE_TYPE_DEADLINE_CONF_VALUE);
+    testRpcScheduler(RpcExecutor.CALL_QUEUE_TYPE_FIFO_CONF_VALUE);
   }
 
   private void testRpcScheduler(final String queueType) throws Exception {
     Configuration schedConf = HBaseConfiguration.create();
-    schedConf.set(SimpleRpcScheduler.CALL_QUEUE_TYPE_CONF_KEY, queueType);
+    schedConf.set(RpcExecutor.CALL_QUEUE_TYPE_CONF_KEY, queueType);
 
     PriorityFunction priority = mock(PriorityFunction.class);
     when(priority.getPriority(any(RequestHeader.class),
@@ -195,19 +197,19 @@ public class TestSimpleRpcScheduler {/*
       CallRunner smallCallTask = mock(CallRunner.class);
       RpcServer.Call smallCall = mock(RpcServer.Call.class);
       RequestHeader smallHead = RequestHeader.newBuilder().setCallId(1).build();
-      when(smallCallTask.getCall()).thenReturn(smallCall);
+      when(smallCallTask.getRpcCall()).thenReturn(smallCall);
       when(smallCall.getHeader()).thenReturn(smallHead);
 
       CallRunner largeCallTask = mock(CallRunner.class);
       RpcServer.Call largeCall = mock(RpcServer.Call.class);
       RequestHeader largeHead = RequestHeader.newBuilder().setCallId(50).build();
-      when(largeCallTask.getCall()).thenReturn(largeCall);
+      when(largeCallTask.getRpcCall()).thenReturn(largeCall);
       when(largeCall.getHeader()).thenReturn(largeHead);
 
       CallRunner hugeCallTask = mock(CallRunner.class);
       RpcServer.Call hugeCall = mock(RpcServer.Call.class);
       RequestHeader hugeHead = RequestHeader.newBuilder().setCallId(100).build();
-      when(hugeCallTask.getCall()).thenReturn(hugeCall);
+      when(hugeCallTask.getRpcCall()).thenReturn(hugeCall);
       when(hugeCall.getHeader()).thenReturn(hugeHead);
 
       when(priority.getDeadline(eq(smallHead), any(Message.class))).thenReturn(0L);
@@ -244,9 +246,9 @@ public class TestSimpleRpcScheduler {/*
       // -> [small small small huge small large small small]
       // -> NO REORDER   [10 10 10 100 10 50 10 10] -> 930 (FIFO Queue)
       // -> WITH REORDER [10 10 10 10 10 10 50 100] -> 530 (Deadline Queue)
-      if (queueType.equals(SimpleRpcScheduler.CALL_QUEUE_TYPE_DEADLINE_CONF_VALUE)) {
+      if (queueType.equals(RpcExecutor.CALL_QUEUE_TYPE_DEADLINE_CONF_VALUE)) {
         assertEquals(530, totalTime);
-      } else if (queueType.equals(SimpleRpcScheduler.CALL_QUEUE_TYPE_FIFO_CONF_VALUE)) {
+      } else if (queueType.equals(RpcExecutor.CALL_QUEUE_TYPE_FIFO_CONF_VALUE)) {
         assertEquals(930, totalTime);
       }
     } finally {
@@ -256,10 +258,11 @@ public class TestSimpleRpcScheduler {/*
 
   @Test
   public void testScanQueueWithZeroScanRatio() throws Exception {
+
     Configuration schedConf = HBaseConfiguration.create();
-    schedConf.setFloat(SimpleRpcScheduler.CALL_QUEUE_HANDLER_FACTOR_CONF_KEY, 1.0f);
-    schedConf.setFloat(SimpleRpcScheduler.CALL_QUEUE_READ_SHARE_CONF_KEY, 0.5f);
-    schedConf.setFloat(SimpleRpcScheduler.CALL_QUEUE_SCAN_SHARE_CONF_KEY, 0f);
+    schedConf.setFloat(RpcExecutor.CALL_QUEUE_HANDLER_FACTOR_CONF_KEY, 1.0f);
+    schedConf.setFloat(RWQueueRpcExecutor.CALL_QUEUE_READ_SHARE_CONF_KEY, 0.5f);
+    schedConf.setFloat(RWQueueRpcExecutor.CALL_QUEUE_SCAN_SHARE_CONF_KEY, 0f);
 
     PriorityFunction priority = mock(PriorityFunction.class);
     when(priority.getPriority(any(RequestHeader.class), any(Message.class),
@@ -273,9 +276,9 @@ public class TestSimpleRpcScheduler {/*
   @Test
   public void testScanQueues() throws Exception {
     Configuration schedConf = HBaseConfiguration.create();
-    schedConf.setFloat(SimpleRpcScheduler.CALL_QUEUE_HANDLER_FACTOR_CONF_KEY, 1.0f);
-    schedConf.setFloat(SimpleRpcScheduler.CALL_QUEUE_READ_SHARE_CONF_KEY, 0.7f);
-    schedConf.setFloat(SimpleRpcScheduler.CALL_QUEUE_SCAN_SHARE_CONF_KEY, 0.5f);
+    schedConf.setFloat(RpcExecutor.CALL_QUEUE_HANDLER_FACTOR_CONF_KEY, 1.0f);
+    schedConf.setFloat(RWQueueRpcExecutor.CALL_QUEUE_READ_SHARE_CONF_KEY, 0.7f);
+    schedConf.setFloat(RWQueueRpcExecutor.CALL_QUEUE_SCAN_SHARE_CONF_KEY, 0.5f);
 
     PriorityFunction priority = mock(PriorityFunction.class);
     when(priority.getPriority(any(RPCProtos.RequestHeader.class), any(Message.class),
@@ -291,21 +294,23 @@ public class TestSimpleRpcScheduler {/*
       putCall.param = RequestConverter.buildMutateRequest(
           Bytes.toBytes("abc"), new Put(Bytes.toBytes("row")));
       RequestHeader putHead = RequestHeader.newBuilder().setMethodName("mutate").build();
-      when(putCallTask.getCall()).thenReturn(putCall);
+      when(putCallTask.getRpcCall()).thenReturn(putCall);
       when(putCall.getHeader()).thenReturn(putHead);
+      when(putCall.getParam()).thenReturn(putCall.param);
 
       CallRunner getCallTask = mock(CallRunner.class);
       RpcServer.Call getCall = mock(RpcServer.Call.class);
       RequestHeader getHead = RequestHeader.newBuilder().setMethodName("get").build();
-      when(getCallTask.getCall()).thenReturn(getCall);
+      when(getCallTask.getRpcCall()).thenReturn(getCall);
       when(getCall.getHeader()).thenReturn(getHead);
 
       CallRunner scanCallTask = mock(CallRunner.class);
       RpcServer.Call scanCall = mock(RpcServer.Call.class);
       scanCall.param = ScanRequest.newBuilder().setScannerId(1).build();
       RequestHeader scanHead = RequestHeader.newBuilder().setMethodName("scan").build();
-      when(scanCallTask.getCall()).thenReturn(scanCall);
+      when(scanCallTask.getRpcCall()).thenReturn(scanCall);
       when(scanCall.getHeader()).thenReturn(scanHead);
+      when(scanCall.getParam()).thenReturn(scanCall.param);
 
       ArrayList<Integer> work = new ArrayList<Integer>();
       doAnswerTaskExecution(putCallTask, work, 1, 1000);
@@ -362,6 +367,7 @@ public class TestSimpleRpcScheduler {/*
 
   @Test
   public void testSoftAndHardQueueLimits() throws Exception {
+
     Configuration schedConf = HBaseConfiguration.create();
 
     schedConf.setInt(HConstants.REGION_SERVER_HANDLER_COUNT, 0);
@@ -380,7 +386,7 @@ public class TestSimpleRpcScheduler {/*
       putCall.param = RequestConverter.buildMutateRequest(
         Bytes.toBytes("abc"), new Put(Bytes.toBytes("row")));
       RequestHeader putHead = RequestHeader.newBuilder().setMethodName("mutate").build();
-      when(putCallTask.getCall()).thenReturn(putCall);
+      when(putCallTask.getRpcCall()).thenReturn(putCall);
       when(putCall.getHeader()).thenReturn(putHead);
 
       assertTrue(scheduler.dispatch(putCallTask));
@@ -425,14 +431,15 @@ public class TestSimpleRpcScheduler {/*
   // fastpath thread to: new FastPathBalancedQueueRpcExecutor("CodelFPBQ.default", handlerCount, numCallQueues...
   // Codel is hard to test. This test is going to be flakey given it all timer-based. Disabling for now till chat
   // with authors.
-  @Ignore @Test
+  @Test
   public void testCoDelScheduling() throws Exception {
     CoDelEnvironmentEdge envEdge = new CoDelEnvironmentEdge();
-    envEdge.threadNamePrefixs.add(SimpleRpcScheduler.CODEL_FASTPATH_BALANCED_Q);
+    envEdge.threadNamePrefixs.add("RpcServer.CodelFPBQ.default.handler");
+    envEdge.threadNamePrefixs.add("RpcServer.CodelRWQ.default.handler");
     Configuration schedConf = HBaseConfiguration.create();
     schedConf.setInt(RpcScheduler.IPC_SERVER_MAX_CALLQUEUE_LENGTH, 250);
-    schedConf.set(SimpleRpcScheduler.CALL_QUEUE_TYPE_CONF_KEY,
-      SimpleRpcScheduler.CALL_QUEUE_TYPE_CODEL_CONF_VALUE);
+    schedConf.set(RpcExecutor.CALL_QUEUE_TYPE_CONF_KEY,
+      RpcExecutor.CALL_QUEUE_TYPE_CODEL_CONF_VALUE);
     PriorityFunction priority = mock(PriorityFunction.class);
     when(priority.getPriority(any(RPCProtos.RequestHeader.class), any(Message.class),
       any(User.class))).thenReturn(HConstants.NORMAL_QOS);
@@ -512,6 +519,8 @@ public class TestSimpleRpcScheduler {/*
                                                              .build();
     when(putCall.getSize()).thenReturn(9L);
     when(putCall.getHeader()).thenReturn(putHead);
+    when(putCall.getReceiveTime()).thenReturn(putCall.timestamp);
+    when(putCall.getParam()).thenReturn(putCall.param);
 
     CallRunner cr = new CallRunner(null, putCall) {
       public void run() {
@@ -523,7 +532,7 @@ public class TestSimpleRpcScheduler {/*
         } catch (InterruptedException e) {
         }
       }
-      public Call getCall() {
+      public RpcCall getRpcCall() {
         return putCall;
       }
 

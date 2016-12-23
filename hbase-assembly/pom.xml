@@ -138,7 +138,7 @@
                 <argument>bash</argument>
                 <argument>-c</argument>
                 <argument>cat maven-shared-archive-resources/META-INF/NOTICE \
-                  `find ${project.build.directory}/dependency -iname NOTICE -or -iname NOTICE.txt` \
+                  `find ${project.build.directory}/dependency -iname NOTICE -or -iname NOTICE.txt`
                 </argument>
               </arguments>
               <outputFile>${project.build.directory}/NOTICE.aggregate</outputFile>
@@ -160,10 +160,6 @@
     <dependency>
       <groupId>org.apache.hbase</groupId>
       <artifactId>hbase-server</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.hbase</groupId>
-      <artifactId>hbase-thrift</artifactId>
     </dependency>
     <!-- To dump tools in hbase-procedure into cached_classpath.txt. -->
     <dependency>

@@ -27,7 +27,7 @@ import org.apache.hadoop.hbase.ipc.RpcControllerFactory;
 
 import java.io.IOException;
 import java.io.InterruptedIOException;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -41,11 +41,13 @@ import java.util.concurrent.atomic.AtomicLong;
  * <p>
  * Used to communicate with a single HBase table similar to {@link Table}
  * but meant for batched, potentially asynchronous puts. Obtain an instance from
- * a {@link Connection} and call {@link #close()} afterwards.
+ * a {@link Connection} and call {@link #close()} afterwards. Provide an alternate
+ * to this implementation by setting {@link BufferedMutatorParams#implementationClassName(String)}
+ * or by setting alternate classname via the key {} in Configuration.
  * </p>
  *
  * <p>
- * While this can be used accross threads, great care should be used when doing so.
+ * While this can be used across threads, great care should be used when doing so.
  * Errors are global to the buffered mutator and the Exceptions can be thrown on any
  * thread that causes the flush for requests.
  * </p>
@@ -57,6 +59,12 @@ import java.util.concurrent.atomic.AtomicLong;
 @InterfaceAudience.Private
 @InterfaceStability.Evolving
 public class BufferedMutatorImpl implements BufferedMutator {
+  /**
+   * Key to use setting non-default BufferedMutator implementation
+   * classname via Configuration.
+   */
+  public static final String HBASE_BUFFEREDMUTATOR_CLASSNAME_KEY =
+      "hbase.client.bufferedmutator.classname";
 
   private static final Log LOG = LogFactory.getLog(BufferedMutatorImpl.class);
   
@@ -129,7 +137,7 @@ public class BufferedMutatorImpl implements BufferedMutator {
   @Override
   public void mutate(Mutation m) throws InterruptedIOException,
       RetriesExhaustedWithDetailsException {
-    mutate(Arrays.asList(m));
+    mutate(Collections.singletonList(m));
   }
 
   @Override

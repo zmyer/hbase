@@ -45,6 +45,7 @@ import org.apache.hadoop.hbase.ServerName;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
 import org.apache.hadoop.hbase.client.MasterSwitchType;
+import org.apache.hadoop.hbase.client.Mutation;
 import org.apache.hadoop.hbase.constraint.ConstraintException;
 import org.apache.hadoop.hbase.coprocessor.CoprocessorService;
 import org.apache.hadoop.hbase.coprocessor.MasterCoprocessorEnvironment;
@@ -79,7 +80,6 @@ import org.apache.hadoop.hbase.protobuf.generated.RSGroupAdminProtos.MoveTablesR
 import org.apache.hadoop.hbase.protobuf.generated.RSGroupAdminProtos.RSGroupAdminService;
 import org.apache.hadoop.hbase.protobuf.generated.RSGroupAdminProtos.RemoveRSGroupRequest;
 import org.apache.hadoop.hbase.protobuf.generated.RSGroupAdminProtos.RemoveRSGroupResponse;
-
 
 @InterfaceAudience.Private
 public class RSGroupAdminEndpoint extends RSGroupAdminService
@@ -1030,6 +1030,18 @@ public class RSGroupAdminEndpoint extends RSGroupAdminService
   }
 
   @Override
+  public void preMergeRegions(
+      final ObserverContext<MasterCoprocessorEnvironment> ctx,
+      final HRegionInfo[] regionsToMerge) throws IOException {
+  }
+
+  @Override
+  public void postMergeRegions(
+      final ObserverContext<MasterCoprocessorEnvironment> ctx,
+      final HRegionInfo[] regionsToMerge) throws IOException {
+  }
+
+  @Override
   public void preMoveServers(ObserverContext<MasterCoprocessorEnvironment> ctx, Set<HostAndPort>
       servers, String targetGroup) throws IOException {
   }
@@ -1097,5 +1109,76 @@ public class RSGroupAdminEndpoint extends RSGroupAdminService
   @Override
   public void postListProcedures(ObserverContext<MasterCoprocessorEnvironment> ctx,
       List<ProcedureInfo> procInfoList) throws IOException {
+  }
+
+  @Override
+  public void preSplitRegion(
+      final ObserverContext<MasterCoprocessorEnvironment> c,
+      final TableName tableName,
+      final byte[] splitRow) throws IOException {
+  }
+
+  @Override
+  public void preSplitRegionAction(
+      final ObserverContext<MasterCoprocessorEnvironment> c,
+      final TableName tableName,
+      final byte[] splitRow) throws IOException {
+  }
+
+  @Override
+  public void postCompletedSplitRegionAction(
+      final ObserverContext<MasterCoprocessorEnvironment> c,
+      final HRegionInfo regionInfoA,
+      final HRegionInfo regionInfoB) throws IOException {
+  }
+
+  @Override
+  public void preSplitRegionBeforePONRAction(
+      final ObserverContext<MasterCoprocessorEnvironment> ctx,
+      final byte[] splitKey,
+      final List<Mutation> metaEntries) throws IOException {
+  }
+
+  @Override
+  public void preSplitRegionAfterPONRAction(
+      final ObserverContext<MasterCoprocessorEnvironment> ctx) throws IOException {
+  }
+
+  @Override
+  public void postRollBackSplitRegionAction(
+      final ObserverContext<MasterCoprocessorEnvironment> ctx) throws IOException {
+  }
+
+  @Override
+  public void preMergeRegionsAction(
+      final ObserverContext<MasterCoprocessorEnvironment> ctx,
+      final HRegionInfo[] regionsToMerge) throws IOException {
+  }
+
+  @Override
+  public void postCompletedMergeRegionsAction(
+      final ObserverContext<MasterCoprocessorEnvironment> c,
+      final HRegionInfo[] regionsToMerge,
+      final HRegionInfo mergedRegion) throws IOException {
+  }
+
+  @Override
+  public void preMergeRegionsCommitAction(
+      final ObserverContext<MasterCoprocessorEnvironment> ctx,
+      final HRegionInfo[] regionsToMerge,
+      final List<Mutation> metaEntries) throws IOException {
+  }
+
+  @Override
+  public void postMergeRegionsCommitAction(
+      final ObserverContext<MasterCoprocessorEnvironment> ctx,
+      final HRegionInfo[] regionsToMerge,
+      final HRegionInfo mergedRegion) throws IOException {
+  }
+
+  @Override
+  public void postRollBackMergeRegionsAction(
+      final ObserverContext<MasterCoprocessorEnvironment> ctx,
+      final HRegionInfo[] regionsToMerge) throws IOException {
   }
 }

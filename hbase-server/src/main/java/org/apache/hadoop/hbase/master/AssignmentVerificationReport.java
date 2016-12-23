@@ -29,11 +29,11 @@ import java.util.Set;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
+import org.apache.hadoop.hbase.favored.FavoredNodeAssignmentHelper;
+import org.apache.hadoop.hbase.favored.FavoredNodesPlan;
 import org.apache.hadoop.hbase.HRegionInfo;
 import org.apache.hadoop.hbase.ServerName;
 import org.apache.hadoop.hbase.TableName;
-import org.apache.hadoop.hbase.master.balancer.FavoredNodeAssignmentHelper;
-import org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan;
 /**
  * Helper class that is used by {@link RegionPlacementMaintainer} to print
  * information for favored nodes
@@ -460,7 +460,7 @@ public class AssignmentVerificationReport {
 
   public void print(boolean isDetailMode) {
     if (!isFilledUp) {
-      System.err.println("[Error] Region assignment verfication report" +
+      System.err.println("[Error] Region assignment verification report" +
           "hasn't been filled up");
     }
     DecimalFormat df = new java.text.DecimalFormat( "#.##");

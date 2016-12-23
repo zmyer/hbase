@@ -127,14 +127,14 @@ public class Scan extends Query {
   // scan.setAttribute(Scan.SCAN_ATTRIBUTES_TABLE_NAME, Bytes.toBytes(tableName))
   static public final String SCAN_ATTRIBUTES_TABLE_NAME = "scan.attributes.table.name";
 
-  /*
-   * -1 means no caching
+  /**
+   * -1 means no caching specified and the value of {@link HConstants#HBASE_CLIENT_SCANNER_CACHING}
+   * (default to {@link HConstants#DEFAULT_HBASE_CLIENT_SCANNER_CACHING}) will be used
    */
   private int caching = -1;
   private long maxResultSize = -1;
   private boolean cacheBlocks = true;
   private boolean reversed = false;
-  private TimeRange tr = new TimeRange();
   private Map<byte [], NavigableSet<byte []>> familyMap =
     new TreeMap<byte [], NavigableSet<byte []>>(Bytes.BYTES_COMPARATOR);
   private Boolean asyncPrefetch = null;
@@ -153,25 +153,22 @@ public class Scan extends Query {
    */
   public static final boolean DEFAULT_HBASE_CLIENT_SCANNER_ASYNC_PREFETCH = false;
 
-   /**
-   * Set it true for small scan to get better performance
-   *
-   * Small scan should use pread and big scan can use seek + read
-   *
-   * seek + read is fast but can cause two problem (1) resource contention (2)
-   * cause too much network io
-   *
-   * [89-fb] Using pread for non-compaction read request
-   * https://issues.apache.org/jira/browse/HBASE-7266
-   *
-   * On the other hand, if setting it true, we would do
-   * openScanner,next,closeScanner in one RPC call. It means the better
-   * performance for small scan. [HBASE-9488].
-   *
-   * Generally, if the scan range is within one data block(64KB), it could be
-   * considered as a small scan.
+  /**
+   * Set it true for small scan to get better performance Small scan should use pread and big scan
+   * can use seek + read seek + read is fast but can cause two problem (1) resource contention (2)
+   * cause too much network io [89-fb] Using pread for non-compaction read request
+   * https://issues.apache.org/jira/browse/HBASE-7266 On the other hand, if setting it true, we
+   * would do openScanner,next,closeScanner in one RPC call. It means the better performance for
+   * small scan. [HBASE-9488]. Generally, if the scan range is within one data block(64KB), it could
+   * be considered as a small scan.
    */
   private boolean small = false;
+
+  /**
+   * The mvcc read point to use when open a scanner. Remember to clear it after switching regions as
+   * the mvcc is only valid within region scope.
+   */
+  private long mvccReadPoint = -1L;
 
   /**
    * Create a Scan operation across all rows.
@@ -252,6 +249,7 @@ public class Scan extends Query {
       TimeRange tr = entry.getValue();
       setColumnFamilyTimeRange(entry.getKey(), tr.getMin(), tr.getMax());
     }
+    this.mvccReadPoint = scan.getMvccReadPoint();
   }
 
   /**
@@ -280,6 +278,7 @@ public class Scan extends Query {
       TimeRange tr = entry.getValue();
       setColumnFamilyTimeRange(entry.getKey(), tr.getMin(), tr.getMax());
     }
+    this.mvccReadPoint = -1L;
   }
 
   public boolean isGetScan() {
@@ -325,7 +324,7 @@ public class Scan extends Query {
   }
 
   /**
-   * Get versions of columns only within the specified timestamp range,
+   * Set versions of columns only within the specified timestamp range,
    * [minStamp, maxStamp).  Note, default maximum versions to return is 1.  If
    * your time range spans more than one version and you want all versions
    * returned, up the number of versions beyond the default.
@@ -335,9 +334,18 @@ public class Scan extends Query {
    * @see #setMaxVersions(int)
    * @return this
    */
+  @Override
   public Scan setTimeRange(long minStamp, long maxStamp) throws IOException {
-    tr = new TimeRange(minStamp, maxStamp);
-    return this;
+    return (Scan) super.setTimeRange(minStamp, maxStamp);
+  }
+
+  /**
+   * Set versions of columns only within the specified timestamp range,
+   * @param tr Input TimeRange
+   * @return this for invocation chaining
+   */
+  public Scan setTimeRange(TimeRange tr) {
+    return (Scan) super.setTimeRange(tr);
   }
 
   /**
@@ -353,7 +361,7 @@ public class Scan extends Query {
   public Scan setTimeStamp(long timestamp)
   throws IOException {
     try {
-      tr = new TimeRange(timestamp, timestamp+1);
+      super.setTimeRange(timestamp, timestamp + 1);
     } catch(Exception e) {
       // This should never happen, unless integer overflow or something extremely wrong...
       LOG.error("TimeRange failed, likely caused by integer overflow. ", e);
@@ -362,8 +370,14 @@ public class Scan extends Query {
     return this;
   }
 
-  @Override public Scan setColumnFamilyTimeRange(byte[] cf, long minStamp, long maxStamp) {
+  @Override
+  public Scan setColumnFamilyTimeRange(byte[] cf, long minStamp, long maxStamp) {
     return (Scan) super.setColumnFamilyTimeRange(cf, minStamp, maxStamp);
+  }
+
+  @Override
+  public Scan setColumnFamilyTimeRange(byte[] cf, TimeRange tr) {
+    return (Scan) super.setColumnFamilyTimeRange(cf, tr);
   }
 
   /**
@@ -663,13 +677,6 @@ public class Scan extends Query {
    */
   public int getCaching() {
     return this.caching;
-  }
-
-  /**
-   * @return TimeRange
-   */
-  public TimeRange getTimeRange() {
-    return this.tr;
   }
 
   /**
@@ -974,5 +981,27 @@ public class Scan extends Query {
   public Scan setAsyncPrefetch(boolean asyncPrefetch) {
     this.asyncPrefetch = asyncPrefetch;
     return this;
+  }
+
+  /**
+   * Get the mvcc read point used to open a scanner.
+   */
+  long getMvccReadPoint() {
+    return mvccReadPoint;
+  }
+
+  /**
+   * Set the mvcc read point used to open a scanner.
+   */
+  Scan setMvccReadPoint(long mvccReadPoint) {
+    this.mvccReadPoint = mvccReadPoint;
+    return this;
+  }
+
+  /**
+   * Set the mvcc read point to -1 which means do not use it.
+   */
+  Scan resetMvccReadPoint() {
+    return setMvccReadPoint(-1L);
   }
 }

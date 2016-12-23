@@ -72,7 +72,7 @@ public class SplitLogTask {
   SplitLogTask(final ZooKeeperProtos.SplitLogTask slt) {
     this.originServer = ProtobufUtil.toServerName(slt.getServerName());
     this.state = slt.getState();
-    this.mode = (slt.hasMode()) ? slt.getMode() : 
+    this.mode = (slt.hasMode()) ? slt.getMode() :
       ZooKeeperProtos.SplitLogTask.RecoveryMode.UNKNOWN;
   }
 
@@ -153,7 +153,7 @@ public class SplitLogTask {
   /**
    * @param data Serialized date to parse.
    * @return An SplitLogTaskState instance made of the passed <code>data</code>
-   * @throws DeserializationException 
+   * @throws DeserializationException
    * @see #toByteArray()
    */
   public static SplitLogTask parseFrom(final byte [] data) throws DeserializationException {

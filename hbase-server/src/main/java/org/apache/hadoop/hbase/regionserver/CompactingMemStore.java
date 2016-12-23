@@ -31,6 +31,7 @@ import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.Cell;
 import org.apache.hadoop.hbase.CellComparator;
+import org.apache.hadoop.hbase.HColumnDescriptor;
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hadoop.hbase.util.ClassSize;
@@ -51,6 +52,11 @@ import org.apache.hadoop.hbase.wal.WAL;
 @InterfaceAudience.Private
 public class CompactingMemStore extends AbstractMemStore {
 
+  // The external setting of the compacting MemStore behaviour
+  public static final String COMPACTING_MEMSTORE_TYPE_KEY =
+      "hbase.hregion.compacting.memstore.type";
+  public static final String COMPACTING_MEMSTORE_TYPE_DEFAULT =
+      String.valueOf(HColumnDescriptor.MemoryCompaction.NONE);
   // Default fraction of in-memory-flush size w.r.t. flush-to-disk size
   public static final String IN_MEMORY_FLUSH_THRESHOLD_FACTOR_KEY =
       "hbase.memstore.inmemoryflush.threshold.factor";
@@ -75,12 +81,13 @@ public class CompactingMemStore extends AbstractMemStore {
       + CompactionPipeline.DEEP_OVERHEAD + MemStoreCompactor.DEEP_OVERHEAD;
 
   public CompactingMemStore(Configuration conf, CellComparator c,
-      HStore store, RegionServicesForStores regionServices) throws IOException {
+      HStore store, RegionServicesForStores regionServices,
+      HColumnDescriptor.MemoryCompaction compactionPolicy) throws IOException {
     super(conf, c);
     this.store = store;
     this.regionServices = regionServices;
     this.pipeline = new CompactionPipeline(getRegionServices());
-    this.compactor = new MemStoreCompactor(this);
+    this.compactor = new MemStoreCompactor(this, compactionPolicy);
     initInmemoryFlushSize(conf);
   }
 
@@ -100,19 +107,19 @@ public class CompactingMemStore extends AbstractMemStore {
   }
 
   /**
-   * @return Total memory occupied by this MemStore. This includes active segment size and heap size
-   *         overhead of this memstore but won't include any size occupied by the snapshot. We
-   *         assume the snapshot will get cleared soon. This is not thread safe and the memstore may
-   *         be changed while computing its size. It is the responsibility of the caller to make
-   *         sure this doesn't happen.
+   * @return Total memory occupied by this MemStore. This won't include any size occupied by the
+   *         snapshot. We assume the snapshot will get cleared soon. This is not thread safe and
+   *         the memstore may be changed while computing its size. It is the responsibility of the
+   *         caller to make sure this doesn't happen.
    */
   @Override
-  public long size() {
-    long res = DEEP_OVERHEAD + this.active.size();
+  public MemstoreSize size() {
+    MemstoreSize memstoreSize = new MemstoreSize();
+    memstoreSize.incMemstoreSize(this.active.keySize(), this.active.heapOverhead());
     for (Segment item : pipeline.getSegments()) {
-      res += CompactionPipeline.ENTRY_OVERHEAD + item.size();
+      memstoreSize.incMemstoreSize(item.keySize(), item.heapOverhead());
     }
-    return res;
+    return memstoreSize;
   }
 
   /**
@@ -163,13 +170,34 @@ public class CompactingMemStore extends AbstractMemStore {
    * @return size of data that is going to be flushed
    */
   @Override
-  public long getFlushableSize() {
-    long snapshotSize = getSnapshotSize();
-    if (snapshotSize == 0) {
+  public MemstoreSize getFlushableSize() {
+    MemstoreSize snapshotSize = getSnapshotSize();
+    if (snapshotSize.getDataSize() == 0) {
       // if snapshot is empty the tail of the pipeline is flushed
       snapshotSize = pipeline.getTailSize();
     }
-    return snapshotSize > 0 ? snapshotSize : keySize();
+    return snapshotSize.getDataSize() > 0 ? snapshotSize
+        : new MemstoreSize(this.active.keySize(), this.active.heapOverhead());
+  }
+
+  @Override
+  protected long keySize() {
+    // Need to consider keySize of all segments in pipeline and active
+    long k = this.active.keySize();
+    for (Segment segment : this.pipeline.getSegments()) {
+      k += segment.keySize();
+    }
+    return k;
+  }
+
+  @Override
+  protected long heapOverhead() {
+    // Need to consider heapOverhead of all segments in pipeline and active
+    long h = this.active.heapOverhead();
+    for (Segment segment : this.pipeline.getSegments()) {
+      h += segment.heapOverhead();
+    }
+    return h;
   }
 
   @Override
@@ -195,9 +223,9 @@ public class CompactingMemStore extends AbstractMemStore {
     return list;
   }
 
-  public boolean swapCompactedSegments(VersionedSegmentsList versionedList,
-      ImmutableSegment result) {
-    return pipeline.swap(versionedList, result);
+  public boolean swapCompactedSegments(VersionedSegmentsList versionedList, ImmutableSegment result,
+      boolean merge) {
+    return pipeline.swap(versionedList, result, !merge);
   }
 
   /**
@@ -318,7 +346,7 @@ public class CompactingMemStore extends AbstractMemStore {
   }
 
   private boolean shouldFlushInMemory() {
-    if (this.active.size() > inmemoryFlushSize) { // size above flush threshold
+    if (this.active.keySize() > inmemoryFlushSize) { // size above flush threshold
         // the inMemoryFlushInProgress is CASed to be true here in order to mutual exclude
         // the insert of the active into the compaction pipeline
         return (inMemoryFlushInProgress.compareAndSet(false,true));
@@ -394,6 +422,11 @@ public class CompactingMemStore extends AbstractMemStore {
     allowCompaction.set(true);
   }
 
+  @VisibleForTesting
+  void initiateType(HColumnDescriptor.MemoryCompaction compactionType) {
+    compactor.initiateAction(compactionType);
+  }
+
   /**
    * @param cell Find the row that comes after this one.  If null, we return the
    *             first.
@@ -414,7 +447,7 @@ public class CompactingMemStore extends AbstractMemStore {
 
   // debug method
   public void debug() {
-    String msg = "active size=" + this.active.size();
+    String msg = "active size=" + this.active.keySize();
     msg += " threshold="+IN_MEMORY_FLUSH_THRESHOLD_FACTOR_DEFAULT* inmemoryFlushSize;
     msg += " allow compaction is "+ (allowCompaction.get() ? "true" : "false");
     msg += " inMemoryFlushInProgress is "+ (inMemoryFlushInProgress.get() ? "true" : "false");

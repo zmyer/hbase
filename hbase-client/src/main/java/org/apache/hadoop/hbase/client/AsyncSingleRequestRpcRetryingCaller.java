@@ -17,15 +17,15 @@
  */
 package org.apache.hadoop.hbase.client;
 
+import static org.apache.hadoop.hbase.client.ConnectionUtils.SLEEP_DELTA_NS;
 import static org.apache.hadoop.hbase.client.ConnectionUtils.getPauseTime;
+import static org.apache.hadoop.hbase.client.ConnectionUtils.resetController;
 import static org.apache.hadoop.hbase.client.ConnectionUtils.retries2Attempts;
+import static org.apache.hadoop.hbase.client.ConnectionUtils.translateException;
 
 import io.netty.util.HashedWheelTimer;
-import io.netty.util.Timeout;
-import io.netty.util.TimerTask;
 
 import java.io.IOException;
-import java.lang.reflect.UndeclaredThrowableException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -40,11 +40,9 @@ import org.apache.hadoop.hbase.HRegionLocation;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
 import org.apache.hadoop.hbase.ipc.HBaseRpcController;
-import org.apache.hadoop.hbase.shaded.com.google.protobuf.ServiceException;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.ClientProtos.ClientService;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hadoop.hbase.util.EnvironmentEdgeManager;
-import org.apache.hadoop.ipc.RemoteException;
 
 /**
  * Retry caller for a single request, such as get, put, delete, etc.
@@ -68,6 +66,8 @@ class AsyncSingleRequestRpcRetryingCaller<T> {
 
   private final byte[] row;
 
+  private final RegionLocateType locateType;
+
   private final Callable<T> callable;
 
   private final long pauseNs;
@@ -89,12 +89,14 @@ class AsyncSingleRequestRpcRetryingCaller<T> {
   private final long startNs;
 
   public AsyncSingleRequestRpcRetryingCaller(HashedWheelTimer retryTimer, AsyncConnectionImpl conn,
-      TableName tableName, byte[] row, Callable<T> callable, long pauseNs, int maxRetries,
-      long operationTimeoutNs, long rpcTimeoutNs, int startLogErrorsCnt) {
+      TableName tableName, byte[] row, RegionLocateType locateType, Callable<T> callable,
+      long pauseNs, int maxRetries, long operationTimeoutNs, long rpcTimeoutNs,
+      int startLogErrorsCnt) {
     this.retryTimer = retryTimer;
     this.conn = conn;
     this.tableName = tableName;
     this.row = row;
+    this.locateType = locateType;
     this.callable = callable;
     this.pauseNs = pauseNs;
     this.maxAttempts = retries2Attempts(maxRetries);
@@ -113,17 +115,8 @@ class AsyncSingleRequestRpcRetryingCaller<T> {
     return TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - startNs);
   }
 
-  private static Throwable translateException(Throwable t) {
-    if (t instanceof UndeclaredThrowableException && t.getCause() != null) {
-      t = t.getCause();
-    }
-    if (t instanceof RemoteException) {
-      t = ((RemoteException) t).unwrapRemoteException();
-    }
-    if (t instanceof ServiceException && t.getCause() != null) {
-      t = translateException(t.getCause());
-    }
-    return t;
+  private long remainingTimeNs() {
+    return operationTimeoutNs - (System.nanoTime() - startNs);
   }
 
   private void completeExceptionally() {
@@ -136,8 +129,9 @@ class AsyncSingleRequestRpcRetryingCaller<T> {
     if (tries > startLogErrorsCnt) {
       LOG.warn(errMsg.get(), error);
     }
-    RetriesExhaustedException.ThrowableWithExtraContext qt = new RetriesExhaustedException.ThrowableWithExtraContext(
-        error, EnvironmentEdgeManager.currentTime(), "");
+    RetriesExhaustedException.ThrowableWithExtraContext qt =
+        new RetriesExhaustedException.ThrowableWithExtraContext(error,
+            EnvironmentEdgeManager.currentTime(), "");
     exceptions.add(qt);
     if (error instanceof DoNotRetryIOException || tries >= maxAttempts) {
       completeExceptionally();
@@ -145,7 +139,7 @@ class AsyncSingleRequestRpcRetryingCaller<T> {
     }
     long delayNs;
     if (operationTimeoutNs > 0) {
-      long maxDelayNs = operationTimeoutNs - (System.nanoTime() - startNs);
+      long maxDelayNs = remainingTimeNs() - SLEEP_DELTA_NS;
       if (maxDelayNs <= 0) {
         completeExceptionally();
         return;
@@ -156,25 +150,21 @@ class AsyncSingleRequestRpcRetryingCaller<T> {
     }
     updateCachedLocation.accept(error);
     tries++;
-    retryTimer.newTimeout(new TimerTask() {
-
-      @Override
-      public void run(Timeout timeout) throws Exception {
-        // always restart from beginning.
-        locateThenCall();
-      }
-    }, delayNs, TimeUnit.NANOSECONDS);
-  }
-
-  private void resetController() {
-    controller.reset();
-    if (rpcTimeoutNs >= 0) {
-      controller.setCallTimeout(
-        (int) Math.min(Integer.MAX_VALUE, TimeUnit.NANOSECONDS.toMillis(rpcTimeoutNs)));
-    }
+    retryTimer.newTimeout(t -> locateThenCall(), delayNs, TimeUnit.NANOSECONDS);
   }
 
   private void call(HRegionLocation loc) {
+    long callTimeoutNs;
+    if (operationTimeoutNs > 0) {
+      callTimeoutNs = remainingTimeNs();
+      if (callTimeoutNs <= 0) {
+        completeExceptionally();
+        return;
+      }
+      callTimeoutNs = Math.min(callTimeoutNs, rpcTimeoutNs);
+    } else {
+      callTimeoutNs = rpcTimeoutNs;
+    }
     ClientService.Interface stub;
     try {
       stub = conn.getRegionServerStub(loc.getServerName());
@@ -185,11 +175,10 @@ class AsyncSingleRequestRpcRetryingCaller<T> {
             + " failed, tries = " + tries + ", maxAttempts = " + maxAttempts + ", timeout = "
             + TimeUnit.NANOSECONDS.toMillis(operationTimeoutNs) + " ms, time elapsed = "
             + elapsedMs() + " ms",
-        err -> conn.getLocator().updateCachedLocations(tableName,
-          loc.getRegionInfo().getRegionName(), row, err, loc.getServerName()));
+        err -> conn.getLocator().updateCachedLocation(loc, err));
       return;
     }
-    resetController();
+    resetController(controller, callTimeoutNs);
     callable.call(controller, loc, stub).whenComplete((result, error) -> {
       if (error != null) {
         onError(error,
@@ -198,8 +187,7 @@ class AsyncSingleRequestRpcRetryingCaller<T> {
               + tries + ", maxAttempts = " + maxAttempts + ", timeout = "
               + TimeUnit.NANOSECONDS.toMillis(operationTimeoutNs) + " ms, time elapsed = "
               + elapsedMs() + " ms",
-          err -> conn.getLocator().updateCachedLocations(tableName,
-            loc.getRegionInfo().getRegionName(), row, err, loc.getServerName()));
+          err -> conn.getLocator().updateCachedLocation(loc, err));
         return;
       }
       future.complete(result);
@@ -207,19 +195,30 @@ class AsyncSingleRequestRpcRetryingCaller<T> {
   }
 
   private void locateThenCall() {
-    conn.getLocator().getRegionLocation(tableName, row, tries > 1).whenComplete((loc, error) -> {
-      if (error != null) {
-        onError(error,
-          () -> "Locate '" + Bytes.toStringBinary(row) + "' in " + tableName + " failed, tries = "
-              + tries + ", maxAttempts = " + maxAttempts + ", timeout = "
-              + TimeUnit.NANOSECONDS.toMillis(operationTimeoutNs) + " ms, time elapsed = "
-              + elapsedMs() + " ms",
-          err -> {
-          });
+    long locateTimeoutNs;
+    if (operationTimeoutNs > 0) {
+      locateTimeoutNs = remainingTimeNs();
+      if (locateTimeoutNs <= 0) {
+        completeExceptionally();
         return;
       }
-      call(loc);
-    });
+    } else {
+      locateTimeoutNs = -1L;
+    }
+    conn.getLocator().getRegionLocation(tableName, row, locateType, locateTimeoutNs)
+        .whenComplete((loc, error) -> {
+          if (error != null) {
+            onError(error,
+              () -> "Locate '" + Bytes.toStringBinary(row) + "' in " + tableName
+                  + " failed, tries = " + tries + ", maxAttempts = " + maxAttempts + ", timeout = "
+                  + TimeUnit.NANOSECONDS.toMillis(operationTimeoutNs) + " ms, time elapsed = "
+                  + elapsedMs() + " ms",
+              err -> {
+              });
+            return;
+          }
+          call(loc);
+        });
   }
 
   public CompletableFuture<T> call() {

@@ -29,9 +29,11 @@ import java.util.TreeMap;
 import java.util.UUID;
 
 import org.apache.hadoop.hbase.Cell;
+import org.apache.hadoop.hbase.CellComparator;
 import org.apache.hadoop.hbase.CellUtil;
 import org.apache.hadoop.hbase.HConstants;
 import org.apache.hadoop.hbase.KeyValue;
+import org.apache.hadoop.hbase.IndividualBytesFieldCell;
 import org.apache.hadoop.hbase.Tag;
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
 import org.apache.hadoop.hbase.classification.InterfaceStability;
@@ -226,12 +228,18 @@ public class Put extends Mutation implements HeapSize, Comparable<Row> {
    * for usage internal HBase to and for advanced client applications.
    */
   public Put addImmutable(byte [] family, byte [] qualifier, long ts, byte [] value) {
+    // Family can not be null, otherwise NullPointerException is thrown when putting the cell into familyMap
+    if (family == null) {
+      throw new IllegalArgumentException("Family cannot be null");
+    }
+
+    // Check timestamp
     if (ts < 0) {
       throw new IllegalArgumentException("Timestamp cannot be negative. ts=" + ts);
     }
+
     List<Cell> list = getCellList(family);
-    KeyValue kv = createPutKeyValue(family, qualifier, ts, value);
-    list.add(kv);
+    list.add(new IndividualBytesFieldCell(this.row, family, qualifier, ts, KeyValue.Type.Put, value));
     familyMap.put(family, list);
     return this;
   }
@@ -319,9 +327,7 @@ public class Put extends Mutation implements HeapSize, Comparable<Row> {
     byte [] family = CellUtil.cloneFamily(kv);
     List<Cell> list = getCellList(family);
     //Checking that the row of the kv is the same as the put
-    int res = Bytes.compareTo(this.row, 0, row.length,
-        kv.getRowArray(), kv.getRowOffset(), kv.getRowLength());
-    if (res != 0) {
+    if (!CellUtil.matchingRow(kv, this.row)) {
       throw new WrongRowIOException("The row in " + kv.toString() +
         " doesn't match the original one " +  Bytes.toStringBinary(this.row));
     }

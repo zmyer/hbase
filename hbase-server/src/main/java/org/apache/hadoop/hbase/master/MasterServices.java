@@ -32,12 +32,15 @@ import org.apache.hadoop.hbase.TableNotDisabledException;
 import org.apache.hadoop.hbase.TableNotFoundException;
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
 import org.apache.hadoop.hbase.executor.ExecutorService;
+import org.apache.hadoop.hbase.favored.FavoredNodesManager;
 import org.apache.hadoop.hbase.master.normalizer.RegionNormalizer;
 import org.apache.hadoop.hbase.master.procedure.MasterProcedureEnv;
 import org.apache.hadoop.hbase.master.snapshot.SnapshotManager;
 import org.apache.hadoop.hbase.procedure.MasterProcedureManagerHost;
 import org.apache.hadoop.hbase.procedure2.ProcedureExecutor;
 import org.apache.hadoop.hbase.quotas.MasterQuotaManager;
+import org.apache.hadoop.hbase.replication.ReplicationException;
+import org.apache.hadoop.hbase.replication.ReplicationPeerConfig;
 
 import com.google.protobuf.Service;
 
@@ -265,6 +268,36 @@ public interface MasterServices extends Server {
       throws IOException;
 
   /**
+   * Merge regions in a table.
+   * @param regionsToMerge daughter regions to merge
+   * @param forcible whether to force to merge even two regions are not adjacent
+   * @param nonceGroup used to detect duplicate
+   * @param nonce used to detect duplicate
+   * @return  procedure Id
+   * @throws IOException
+   */
+  long mergeRegions(
+      final HRegionInfo[] regionsToMerge,
+      final boolean forcible,
+      final long nonceGroup,
+      final long nonce) throws IOException;
+
+  /**
+   * Split a region.
+   * @param regionInfo region to split
+   * @param splitRow split point
+   * @param nonceGroup used to detect duplicate
+   * @param nonce used to detect duplicate
+   * @return  procedure Id
+   * @throws IOException
+   */
+  long splitRegion(
+      final HRegionInfo regionInfo,
+      final byte [] splitRow,
+      final long nonceGroup,
+      final long nonce) throws IOException;
+
+  /**
    * @return Return table descriptors implementation.
    */
   TableDescriptors getTableDescriptors();
@@ -379,4 +412,35 @@ public interface MasterServices extends Server {
    * @return True if this master is stopping.
    */
   boolean isStopping();
+
+  /**
+   * @return Favored Nodes Manager
+   */
+  public FavoredNodesManager getFavoredNodesManager();
+
+  /**
+   * Add a new replication peer for replicating data to slave cluster
+   * @param peerId a short name that identifies the peer
+   * @param peerConfig configuration for the replication slave cluster
+   */
+  void addReplicationPeer(String peerId, ReplicationPeerConfig peerConfig)
+      throws ReplicationException, IOException;
+
+  /**
+   * Removes a peer and stops the replication
+   * @param peerId a short name that identifies the peer
+   */
+  void removeReplicationPeer(String peerId) throws ReplicationException, IOException;
+
+  /**
+   * Restart the replication stream to the specified peer
+   * @param peerId a short name that identifies the peer
+   */
+  void enableReplicationPeer(String peerId) throws ReplicationException, IOException;
+
+  /**
+   * Stop the replication stream to the specified peer
+   * @param peerId a short name that identifies the peer
+   */
+  void disableReplicationPeer(String peerId) throws ReplicationException, IOException;
 }

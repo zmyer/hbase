@@ -33,14 +33,15 @@ EOF
         peers = replication_admin.list_peers
 
         formatter.header(["PEER_ID", "CLUSTER_KEY", "ENDPOINT_CLASSNAME",
-          "STATE", "NAMESPACES", "TABLE_CFS"])
+          "STATE", "NAMESPACES", "TABLE_CFS", "BANDWIDTH"])
 
         peers.entrySet().each do |e|
           state = replication_admin.get_peer_state(e.key)
           namespaces = replication_admin.show_peer_namespaces(e.value)
           tableCFs = replication_admin.show_peer_tableCFs(e.key)
           formatter.row([ e.key, e.value.getClusterKey,
-            e.value.getReplicationEndpointImpl, state, namespaces, tableCFs ])
+            e.value.getReplicationEndpointImpl, state, namespaces, tableCFs,
+            e.value.getBandwidth ])
         end
 
         formatter.footer()

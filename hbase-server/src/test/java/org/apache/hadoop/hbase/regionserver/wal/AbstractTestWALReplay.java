@@ -73,6 +73,7 @@ import org.apache.hadoop.hbase.client.Scan;
 import org.apache.hadoop.hbase.client.Table;
 import org.apache.hadoop.hbase.master.HMaster;
 import org.apache.hadoop.hbase.monitoring.MonitoredTask;
+import org.apache.hadoop.hbase.regionserver.CompactingMemStore;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.ZooKeeperProtos.SplitLogTask.RecoveryMode;
 import org.apache.hadoop.hbase.regionserver.DefaultStoreEngine;
 import org.apache.hadoop.hbase.regionserver.DefaultStoreFlusher;
@@ -82,6 +83,7 @@ import org.apache.hadoop.hbase.regionserver.HRegion;
 import org.apache.hadoop.hbase.regionserver.HRegionServer;
 import org.apache.hadoop.hbase.regionserver.HStore;
 import org.apache.hadoop.hbase.regionserver.MemStoreSnapshot;
+import org.apache.hadoop.hbase.regionserver.MemstoreSize;
 import org.apache.hadoop.hbase.regionserver.MultiVersionConcurrencyControl;
 import org.apache.hadoop.hbase.regionserver.Region;
 import org.apache.hadoop.hbase.regionserver.RegionScanner;
@@ -137,6 +139,8 @@ public abstract class AbstractTestWALReplay {
     Configuration conf = TEST_UTIL.getConfiguration();
     // The below config supported by 0.20-append and CDH3b2
     conf.setInt("dfs.client.block.recovery.retries", 2);
+    conf.set(CompactingMemStore.COMPACTING_MEMSTORE_TYPE_KEY,
+        String.valueOf(HColumnDescriptor.MemoryCompaction.NONE));
     TEST_UTIL.startMiniCluster(3);
     Path hbaseRootDir =
       TEST_UTIL.getDFSCluster().getFileSystem().makeQualified(new Path("/hbase"));
@@ -373,12 +377,12 @@ public abstract class AbstractTestWALReplay {
     Path f =  new Path(basedir, "hfile");
     HFileTestUtil.createHFile(this.conf, fs, f, family, family, Bytes.toBytes(""),
         Bytes.toBytes("z"), 10);
-    List <Pair<byte[],String>>  hfs= new ArrayList<Pair<byte[],String>>(1);
+    List<Pair<byte[], String>> hfs = new ArrayList<Pair<byte[], String>>(1);
     hfs.add(Pair.newPair(family, f.toString()));
     region.bulkLoadHFiles(hfs, true, null);
 
     // Add an edit so something in the WAL
-    byte [] row = tableName.getName();
+    byte[] row = tableName.getName();
     region.put((new Put(row)).addColumn(family, family, family));
     wal.sync();
     final int rowsInsertedCount = 11;
@@ -550,7 +554,7 @@ public abstract class AbstractTestWALReplay {
     final Configuration newConf = HBaseConfiguration.create(this.conf);
     User user = HBaseTestingUtility.getDifferentUser(newConf,
       tableName.getNameAsString());
-    user.runAs(new PrivilegedExceptionAction() {
+    user.runAs(new PrivilegedExceptionAction<Object>() {
       @Override
       public Object run() throws Exception {
         runWALSplit(newConf);
@@ -560,10 +564,9 @@ public abstract class AbstractTestWALReplay {
         final AtomicInteger countOfRestoredEdits = new AtomicInteger(0);
         HRegion region3 = new HRegion(basedir, wal3, newFS, newConf, hri, htd, null) {
           @Override
-          protected boolean restoreEdit(HStore s, Cell cell) {
-            boolean b = super.restoreEdit(s, cell);
+          protected void restoreEdit(HStore s, Cell cell, MemstoreSize memstoreSize) {
+            super.restoreEdit(s, cell, memstoreSize);
             countOfRestoredEdits.incrementAndGet();
-            return b;
           }
         };
         long seqid3 = region3.initialize();

@@ -181,6 +181,16 @@ public interface RegionServerServices extends OnlineRegions, FavoredNodesForRegi
   boolean reportRegionStateTransition(TransitionCode code, HRegionInfo... hris);
 
   /**
+   * Notify master that a region wants to be splitted.
+   */
+  long requestRegionSplit(final HRegionInfo regionInfo, final byte[] splitRow);
+
+  /**
+   * Check with master whether a procedure is completed (either succeed or fail)
+   */
+  boolean isProcedureFinished(final long procId) throws IOException;
+
+  /**
    * Returns a reference to the region server's RPC server
    */
   RpcServerInterface getRpcServer();
@@ -254,6 +264,7 @@ public interface RegionServerServices extends OnlineRegions, FavoredNodesForRegi
    *         or equal to 0.0, and any value greater than 1.0 means we enter the emergency state that
    *         global memstore size already exceeds lower limit.
    */
+  @Deprecated
   double getFlushPressure();
 
   /**

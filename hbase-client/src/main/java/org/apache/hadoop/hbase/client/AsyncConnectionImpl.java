@@ -24,12 +24,15 @@ import static org.apache.hadoop.hbase.client.ConnectionUtils.NO_NONCE_GENERATOR;
 import static org.apache.hadoop.hbase.client.ConnectionUtils.getStubKey;
 import static org.apache.hadoop.hbase.client.NonceGenerator.CLIENT_NONCES_ENABLED_KEY;
 
+import com.google.common.annotations.VisibleForTesting;
+
 import io.netty.util.HashedWheelTimer;
 
 import java.io.IOException;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.IOUtils;
@@ -55,7 +58,8 @@ class AsyncConnectionImpl implements AsyncConnection {
 
   private static final Log LOG = LogFactory.getLog(AsyncConnectionImpl.class);
 
-  private static final HashedWheelTimer RETRY_TIMER = new HashedWheelTimer(
+  @VisibleForTesting
+  static final HashedWheelTimer RETRY_TIMER = new HashedWheelTimer(
       Threads.newDaemonThreadFactory("Async-Client-Retry-Timer"), 10, TimeUnit.MILLISECONDS);
 
   private static final String RESOLVE_HOSTNAME_ON_FAIL_KEY = "hbase.resolve.hostnames.on.failure";
@@ -66,7 +70,7 @@ class AsyncConnectionImpl implements AsyncConnection {
 
   private final User user;
 
-  private final ClusterRegistry registry;
+  final AsyncRegistry registry;
 
   private final String clusterId;
 
@@ -87,16 +91,11 @@ class AsyncConnectionImpl implements AsyncConnection {
   private final ConcurrentMap<String, ClientService.Interface> rsStubs = new ConcurrentHashMap<>();
 
   @SuppressWarnings("deprecation")
-  public AsyncConnectionImpl(Configuration conf, User user) throws IOException {
+  public AsyncConnectionImpl(Configuration conf, User user) {
     this.conf = conf;
     this.user = user;
-
     this.connConf = new AsyncConnectionConfiguration(conf);
-
-    this.locator = new AsyncRegionLocator(conf);
-
-    // action below will not throw exception so no need to catch and close.
-    this.registry = ClusterRegistryFactory.getRegistry(conf);
+    this.registry = AsyncRegistryFactory.getRegistry(conf);
     this.clusterId = Optional.ofNullable(registry.getClusterId()).orElseGet(() -> {
       if (LOG.isDebugEnabled()) {
         LOG.debug("cluster id came back null, using default " + CLUSTER_ID_DEFAULT);
@@ -107,6 +106,7 @@ class AsyncConnectionImpl implements AsyncConnection {
     this.rpcControllerFactory = RpcControllerFactory.instantiate(conf);
     this.hostnameCanChange = conf.getBoolean(RESOLVE_HOSTNAME_ON_FAIL_KEY, true);
     this.rpcTimeout = conf.getInt(HBASE_RPC_TIMEOUT_KEY, DEFAULT_HBASE_RPC_TIMEOUT);
+    this.locator = new AsyncRegionLocator(this, RETRY_TIMER);
     this.callerFactory = new AsyncRpcRetryingCallerFactory(this, RETRY_TIMER);
     if (conf.getBoolean(CLIENT_NONCES_ENABLED_KEY, true)) {
       nonceGenerator = PerClientRandomNonceGenerator.get();
@@ -122,7 +122,6 @@ class AsyncConnectionImpl implements AsyncConnection {
 
   @Override
   public void close() {
-    IOUtils.closeQuietly(locator);
     IOUtils.closeQuietly(rpcClient);
     IOUtils.closeQuietly(registry);
   }
@@ -153,7 +152,12 @@ class AsyncConnectionImpl implements AsyncConnection {
   }
 
   @Override
-  public AsyncTable getTable(TableName tableName) {
-    return new AsyncTableImpl(this, tableName);
+  public RawAsyncTable getRawTable(TableName tableName) {
+    return new RawAsyncTableImpl(this, tableName);
+  }
+
+  @Override
+  public AsyncTable getTable(TableName tableName, ExecutorService pool) {
+    return new AsyncTableImpl(this, tableName, pool);
   }
 }

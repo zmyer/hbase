@@ -34,6 +34,9 @@ import org.apache.hadoop.hbase.util.Pair;
 @InterfaceAudience.Private
 public final class TagUtil {
 
+  // If you would like to check the length of tags, please call {@link TagUtil#checkForTagsLength()}.
+  private static final int MAX_TAGS_LENGTH = (2 * Short.MAX_VALUE) + 1;
+
   /**
    * Private constructor to keep this class from being instantiated.
    */
@@ -244,6 +247,23 @@ public final class TagUtil {
     return tags;
   }
 
+  public static byte[] concatTags(byte[] tags, Cell cell) {
+    int cellTagsLen = cell.getTagsLength();
+    if (cellTagsLen == 0) {
+      // If no Tags, return early.
+      return tags;
+    }
+    byte[] b = new byte[tags.length + cellTagsLen];
+    int pos = Bytes.putBytes(b, 0, tags, 0, tags.length);
+    if (cell instanceof ByteBufferCell) {
+      ByteBufferUtils.copyFromBufferToArray(b, ((ByteBufferCell) cell).getTagsByteBuffer(),
+          ((ByteBufferCell) cell).getTagsPosition(), pos, cellTagsLen);
+    } else {
+      Bytes.putBytes(b, pos, cell.getTagsArray(), cell.getTagsOffset(), cellTagsLen);
+    }
+    return b;
+  }
+
   /**
    * @return Carry forward the TTL tag.
    */
@@ -283,4 +303,16 @@ public final class TagUtil {
       throw new UnsupportedOperationException();
     }
   };
+
+  /**
+   * Check the length of tags. If it is invalid, throw IllegalArgumentException
+   *
+   * @param tagsLength
+   * @throws IllegalArgumentException if tagslength is invalid
+   */
+  public static void checkForTagsLength(int tagsLength) {
+    if (tagsLength > MAX_TAGS_LENGTH) {
+      throw new IllegalArgumentException("tagslength "+ tagsLength + " > " + MAX_TAGS_LENGTH);
+    }
+  }
 }

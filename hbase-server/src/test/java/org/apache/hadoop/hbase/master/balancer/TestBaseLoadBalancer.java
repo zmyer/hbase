@@ -17,12 +17,9 @@
  */
 package org.apache.hadoop.hbase.master.balancer;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
-
+import com.google.common.collect.Lists;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -30,14 +27,12 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
-
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.apache.hadoop.hbase.HBaseIOException;
-import org.apache.hadoop.hbase.HDFSBlocksDistribution;
 import org.apache.hadoop.hbase.HRegionInfo;
 import org.apache.hadoop.hbase.ServerName;
 import org.apache.hadoop.hbase.TableName;
@@ -46,19 +41,21 @@ import org.apache.hadoop.hbase.master.LoadBalancer;
 import org.apache.hadoop.hbase.master.MasterServices;
 import org.apache.hadoop.hbase.master.RackManager;
 import org.apache.hadoop.hbase.master.RegionPlan;
+import org.apache.hadoop.hbase.master.ServerManager;
 import org.apache.hadoop.hbase.master.balancer.BaseLoadBalancer.Cluster;
 import org.apache.hadoop.hbase.master.balancer.BaseLoadBalancer.Cluster.MoveRegionAction;
 import org.apache.hadoop.hbase.testclassification.MasterTests;
 import org.apache.hadoop.hbase.testclassification.MediumTests;
 import org.apache.hadoop.net.DNSToSwitchMapping;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.mockito.Mockito;
-
-import com.google.common.collect.Lists;
-import com.google.common.util.concurrent.Futures;
-import com.google.common.util.concurrent.ListenableFuture;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 @Category({MasterTests.class, MediumTests.class})
 public class TestBaseLoadBalancer extends BalancerTestBase {
@@ -212,6 +209,49 @@ public class TestBaseLoadBalancer extends BalancerTestBase {
     listOfServerNames = getListOfServerNames(servers3);
     assignment = loadBalancer.retainAssignment(existing, listOfServerNames);
     assertRetainedAssignment(existing, listOfServerNames, assignment);
+  }
+
+  @Test (timeout=30000)
+  public void testRandomAssignment() throws Exception {
+    for (int i = 1; i != 5; ++i) {
+      LOG.info("run testRandomAssignment() with idle servers:" + i);
+      testRandomAssignment(i);
+    }
+  }
+
+  private void testRandomAssignment(int numberOfIdleServers) throws Exception {
+    assert numberOfIdleServers > 0;
+    List<ServerName> idleServers = new ArrayList<>(numberOfIdleServers);
+    for (int i = 0; i != numberOfIdleServers; ++i) {
+      idleServers.add(ServerName.valueOf("server-" + i, 1000, 1L));
+    }
+    List<ServerName> allServers = new ArrayList<>(idleServers.size() + 1);
+    allServers.add(ServerName.valueOf("server-" + numberOfIdleServers, 1000, 1L));
+    allServers.addAll(idleServers);
+    LoadBalancer balancer = new MockBalancer() {
+      @Override
+      public boolean shouldBeOnMaster(HRegionInfo region) {
+        return false;
+      }
+    };
+    Configuration conf = HBaseConfiguration.create();
+    conf.setClass("hbase.util.ip.to.rack.determiner", MockMapping.class, DNSToSwitchMapping.class);
+    balancer.setConf(conf);
+    ServerManager sm = Mockito.mock(ServerManager.class);
+    Mockito.when(sm.getOnlineServersListWithPredicator(allServers, BaseLoadBalancer.IDLE_SERVER_PREDICATOR))
+           .thenReturn(idleServers);
+    MasterServices services = Mockito.mock(MasterServices.class);
+    Mockito.when(services.getServerManager()).thenReturn(sm);
+    balancer.setMasterServices(services);
+    HRegionInfo hri1 = new HRegionInfo(
+        TableName.valueOf("table"), "key1".getBytes(), "key2".getBytes(),
+        false, 100);
+    assertNull(balancer.randomAssignment(hri1, Collections.EMPTY_LIST));
+    assertNull(balancer.randomAssignment(hri1, null));
+    for (int i = 0; i != 3; ++i) {
+      ServerName sn = balancer.randomAssignment(hri1, allServers);
+      assertTrue("actual:" + sn + ", except:" + idleServers, idleServers.contains(sn));
+    }
   }
 
   @Test (timeout=180000)
@@ -451,49 +491,17 @@ public class TestBaseLoadBalancer extends BalancerTestBase {
 
     // mock block locality for some regions
     RegionLocationFinder locationFinder = mock(RegionLocationFinder.class);
-    HDFSBlocksDistribution emptyBlockDistribution = new HDFSBlocksDistribution();
-    ListenableFuture<HDFSBlocksDistribution> defaultFuture = Futures
-        .immediateFuture(emptyBlockDistribution);
-    for (HRegionInfo regionInfo : regions) {
-      when(locationFinder.asyncGetBlockDistribution(regionInfo)).thenReturn(
-          defaultFuture);
-    }
     // block locality: region:0   => {server:0}
     //                 region:1   => {server:0, server:1}
     //                 region:42 => {server:4, server:9, server:5}
-    HDFSBlocksDistribution region0BlockDistribution = new HDFSBlocksDistribution();
-    ListenableFuture<HDFSBlocksDistribution> future0 = Futures
-        .immediateFuture(region0BlockDistribution);
-    when(locationFinder.asyncGetBlockDistribution(regions.get(0))).thenReturn(
-        future0);
-    when(locationFinder.getTopBlockLocations(region0BlockDistribution))
-        .thenReturn(Lists.newArrayList(servers.get(0)));
-
-    HDFSBlocksDistribution region1BlockDistribution = new HDFSBlocksDistribution();
-    ListenableFuture<HDFSBlocksDistribution> future1 = Futures
-        .immediateFuture(region1BlockDistribution);
-    when(locationFinder.asyncGetBlockDistribution(regions.get(1))).thenReturn(
-        future1);
-    when(locationFinder.getTopBlockLocations(region1BlockDistribution))
-        .thenReturn(Lists.newArrayList(servers.get(0), servers.get(1)));
-
-    HDFSBlocksDistribution region42BlockDistribution = new HDFSBlocksDistribution();
-    ListenableFuture<HDFSBlocksDistribution> future42 = Futures
-        .immediateFuture(region42BlockDistribution);
-    when(locationFinder.asyncGetBlockDistribution(regions.get(42))).thenReturn(
-        future42);
-    when(locationFinder.getTopBlockLocations(region42BlockDistribution))
-        .thenReturn(
-            Lists.newArrayList(servers.get(4), servers.get(9), servers.get(5)));
-
-    HDFSBlocksDistribution region43BlockDistribution = new HDFSBlocksDistribution();
-    ListenableFuture<HDFSBlocksDistribution> future43 = Futures
-        .immediateFuture(region43BlockDistribution);
-    when(locationFinder.asyncGetBlockDistribution(regions.get(43))).thenReturn(
-        future43);
-    // this server does not exists in clusterStatus
-    when(locationFinder.getTopBlockLocations(region43BlockDistribution))
-        .thenReturn(Lists.newArrayList(ServerName.valueOf("foo", 0, 0)));
+    when(locationFinder.getTopBlockLocations(regions.get(0))).thenReturn(
+        Lists.newArrayList(servers.get(0)));
+    when(locationFinder.getTopBlockLocations(regions.get(1))).thenReturn(
+        Lists.newArrayList(servers.get(0), servers.get(1)));
+    when(locationFinder.getTopBlockLocations(regions.get(42))).thenReturn(
+        Lists.newArrayList(servers.get(4), servers.get(9), servers.get(5)));
+    when(locationFinder.getTopBlockLocations(regions.get(43))).thenReturn(
+        Lists.newArrayList(ServerName.valueOf("foo", 0, 0))); // this server does not exists in clusterStatus
 
     BaseLoadBalancer.Cluster cluster = new Cluster(clusterState, null, locationFinder, null);
 

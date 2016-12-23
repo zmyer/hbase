@@ -32,6 +32,7 @@ import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.hbase.ArrayBackedTag;
 import org.apache.hadoop.hbase.Cell;
 import org.apache.hadoop.hbase.CellComparator;
 import org.apache.hadoop.hbase.HColumnDescriptor;
@@ -40,6 +41,7 @@ import org.apache.hadoop.hbase.KeyValue;
 import org.apache.hadoop.hbase.KeyValue.Type;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.Tag;
+import org.apache.hadoop.hbase.TagType;
 import org.apache.hadoop.hbase.TagUtil;
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
 import org.apache.hadoop.hbase.client.Scan;
@@ -60,6 +62,7 @@ import org.apache.hadoop.hbase.mob.MobStoreEngine;
 import org.apache.hadoop.hbase.mob.MobUtils;
 import org.apache.hadoop.hbase.regionserver.compactions.CompactionContext;
 import org.apache.hadoop.hbase.regionserver.throttle.ThroughputController;
+import org.apache.hadoop.hbase.security.User;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hadoop.hbase.util.EnvironmentEdgeManager;
 import org.apache.hadoop.hbase.util.HFileArchiveUtil;
@@ -101,6 +104,13 @@ public class HMobStore extends HStore {
   private TableName tableLockName;
   private Map<String, List<Path>> map = new ConcurrentHashMap<String, List<Path>>();
   private final IdLock keyLock = new IdLock();
+  // When we add a MOB reference cell to the HFile, we will add 2 tags along with it
+  // 1. A ref tag with type TagType.MOB_REFERENCE_TAG_TYPE. This just denote this this cell is not
+  // original one but a ref to another MOB Cell.
+  // 2. Table name tag. It's very useful in cloning the snapshot. When reading from the cloning
+  // table, we need to find the original mob files by this table name. For details please see
+  // cloning snapshot for mob files.
+  private final byte[] refCellTags;
 
   public HMobStore(final HRegion region, final HColumnDescriptor family,
       final Configuration confParam) throws IOException {
@@ -120,6 +130,12 @@ public class HMobStore extends HStore {
       tableLockManager = region.getRegionServerServices().getTableLockManager();
       tableLockName = MobUtils.getTableLockName(getTableName());
     }
+    List<Tag> tags = new ArrayList<>(2);
+    tags.add(MobConstants.MOB_REF_TAG);
+    Tag tableNameTag = new ArrayBackedTag(TagType.MOB_TABLE_NAME_TAG_TYPE,
+        getTableName().getName());
+    tags.add(tableNameTag);
+    this.refCellTags = TagUtil.fromList(tags);
   }
 
   /**
@@ -448,28 +464,24 @@ public class HMobStore extends HStore {
   }
 
   /**
-   * The compaction in the store of mob.
+   * The compaction in the mob store.
    * The cells in this store contains the path of the mob files. There might be race
-   * condition between the major compaction and the sweeping in mob files.
-   * In order to avoid this, we need mutually exclude the running of the major compaction and
-   * sweeping in mob files.
+   * condition between the major compaction and the mob major compaction.
+   * In order to avoid this, we need mutually exclude the running of the major compaction
+   * and the mob major compaction.
    * The minor compaction is not affected.
-   * The major compaction is marked as retainDeleteMarkers when a sweeping is in progress.
+   * The major compaction is marked as retainDeleteMarkers when a mob major
+   * compaction is in progress.
    */
   @Override
   public List<StoreFile> compact(CompactionContext compaction,
-      ThroughputController throughputController) throws IOException {
-    // If it's major compaction, try to find whether there's a sweeper is running
+    ThroughputController throughputController, User user) throws IOException {
+    // If it's major compaction, try to find whether there's a mob major compaction is running
     // If yes, mark the major compaction as retainDeleteMarkers
     if (compaction.getRequest().isAllFiles()) {
-      // Use the ZooKeeper to coordinate.
-      // 1. Acquire a operation lock.
-      //   1.1. If no, mark the major compaction as retainDeleteMarkers and continue the compaction.
-      //   1.2. If the lock is obtained, search the node of sweeping.
-      //      1.2.1. If the node is there, the sweeping is in progress, mark the major
-      //             compaction as retainDeleteMarkers and continue the compaction.
-      //      1.2.2. If the node is not there, add a child to the major compaction node, and
-      //             run the compaction directly.
+      // Acquire a table lock to coordinate.
+      // 1. If no, mark the major compaction as retainDeleteMarkers and continue the compaction.
+      // 2. If the lock is obtained, run the compaction directly.
       TableLock lock = null;
       if (tableLockManager != null) {
         lock = tableLockManager.readLock(tableLockName, "Major compaction in HMobStore");
@@ -495,7 +507,7 @@ public class HMobStore extends HStore {
               + tableName + "], forcing the delete markers to be retained");
           compaction.getRequest().forceRetainDeleteMarkers();
         }
-        return super.compact(compaction, throughputController);
+        return super.compact(compaction, throughputController, user);
       } finally {
         if (tableLocked && lock != null) {
           try {
@@ -507,7 +519,7 @@ public class HMobStore extends HStore {
       }
     } else {
       // If it's not a major compaction, continue the compaction.
-      return super.compact(compaction, throughputController);
+      return super.compact(compaction, throughputController, user);
     }
   }
 
@@ -582,5 +594,9 @@ public class HMobStore extends HStore {
 
   public long getMobScanCellsSize() {
     return mobScanCellsSize;
+  }
+
+  public byte[] getRefCellTags() {
+    return this.refCellTags;
   }
 }
